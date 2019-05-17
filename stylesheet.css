@@ -1,47 +1,121 @@
+/****** GENERELLE INSTILLINGER *********/
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: lightgrey;
+}
+
+header {
+    grid-area: hd;
+}
+
+footer {
+    grid-area: ft;
+}
+
+content {
+    grid-area: main;
+}
+
+
+/*********HEADER**********/
+
+/*********HEADER DESKTOP AND TABLET************/
+#navbar {
+    overflow: hidden;
+    padding: 30px 5px;
+    /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */
+    position: fixed;
+    /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0;
+    /* At the top */
+    z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 15px;
+
+}
+
+/* Style the logo */
+#navbar img {
+    width: 75%;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+    color: white;
+    border-bottom-style: solid;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+    border-bottom-style: solid;
+    color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+    float: right;
+    margin-top: 5vw;
+}
+
+
+
 /********** FOOTER ***********/
 footer {
     display: grid;
     grid-template-columns: 1fr;
     text-decoration: none;
     list-style-type: none;
-    background: #776B5F;
+    background: rgba(0, 0, 0, 0.69);
     margin-top: auto;
     width: 100%;
-    justify-content: center;
-}
+    align-items: center;
+    position: absolute;
+    bottom: 0;
 
-.footer-column > li {
-    padding-bottom: 10px;
-    list-style-type: none;
-    text-decoration: none;
 }
 
 
-.footer-column > li::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: width .3s;
+span {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-self: center;
+    padding: 2vw;
 }
 
+.footer-column {
+    justify-self: center;
+}
 
-.footer-column > li:hover::after {
-    width: 50%;
-    //transition: width .3s;
+span img {
+    width: 10vw;
+    align-self: center;
+    margin: 2vw;
 }
 
 .footer-column a {
     text-decoration: none;
     color: white;
-    font-family: 'limestoneregular';
-}
-
-.footer-column-header {
-    padding: 10px 0 5px 0;
-    color: #fff;
-    font-family: 'limestoneregular';
 }
 
 .footer-column p {
@@ -50,16 +124,124 @@ footer {
 
 .footer-some {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    z-index: 2;
-    justify-self: start;
-    font-size: 6vw;
+
+}
+
+.footer-some img {
+    width: 8vw;
+    height: 8vw;
+}
+
+.footer-column-logo img {
+    margin-top: 1.5vw;
+    width: 50%;
+
+}
+
+.footer-column-logo {
+    text-align: center;
+}
+
+.footer-last {
+    display: inline;
+}
+
+.footer-text {
+    font-size: 2.2vw;
+    color: white;
+    text-align: center;
 }
 
 
 /*********** MEDIA TABLET ************/
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    footer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
 
+    .footer-some {
+        display: grid;
+        grid-template-rows: auto auto;
+        align-self: flex-end;
+
+    }
+
+
+    .footer-last {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+
+    }
+
+    .address,
+    .contact {
+        padding: 0;
+    }
+
+    .footer-column-logo img {
+        width: 75%;
+    }
+
+    span img {
+        width: 7vw;
+        align-self: center;
+        margin: 2vw;
+    }
+
+}
 
 
 /************ MEDIA DESKTOP **************/
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    footer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    span {
+        padding: 0;
+    }
+
+    .footer-last {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+
+    }
+
+    .footer-last p {
+        font-size: 1.2vw;
+    }
+
+    .address p,
+    .contact p {
+        padding: 0;
+        margin: 2vw;
+
+    }
+
+    .footer-column-logo img {
+        width: 75%;
+    }
+
+    span img {
+        width: 5vw;
+        align-self: center;
+        margin: 2vw;
+    }
+
+    .footer-some img {
+        width: 4vw;
+        height: 4vw;
+    }
+
+
+
+}
