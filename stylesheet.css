@@ -1,1 +1,65 @@
-.shrek()
+/********** FOOTER ***********/
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    list-style-type: none;
+    background: #776B5F;
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-column > li {
+    padding-bottom: 10px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.footer-column > li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+
+.footer-column > li:hover::after {
+    width: 50%;
+    //transition: width .3s;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+    font-family: 'limestoneregular';
+}
+
+.footer-column-header {
+    padding: 10px 0 5px 0;
+    color: #fff;
+    font-family: 'limestoneregular';
+}
+
+.footer-column p {
+    color: white;
+}
+
+.footer-some {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    z-index: 2;
+    justify-self: start;
+    font-size: 6vw;
+}
+
+
+/*********** MEDIA TABLET ************/
+
+
+
+
+/************ MEDIA DESKTOP **************/
