@@ -2,6 +2,11 @@
 window.onscroll = function () {
     scrollFunction()
 };
+AOS.init({
+    duration: 1200,
+})
+
+
 document.querySelector("#mobile-button").addEventListener("click", toggleMenu);
 
 function scrollFunction() {
@@ -9,10 +14,14 @@ function scrollFunction() {
         document.querySelector("#navbar").style.padding = "2px 10px";
         document.querySelector("#logo img").style.width = "50%";
         document.querySelector("#navbar").style.backgroundColor = "rgba(0, 0, 0, 0.58)";
+        document.querySelector("#mobile-button").style.top = "5vw";
+        document.querySelector("#mobile-nav").style.top = "15vw";
     } else {
         document.querySelector("#navbar").style.padding = "30px 10px";
         document.querySelector("#logo img").style.width = "75%";
         document.querySelector("#navbar").style.backgroundColor = "";
+        document.querySelector("#mobile-button").style.top = "12vw";
+        document.querySelector("#mobile-nav").style.top = "25vw";
     }
 }
 
