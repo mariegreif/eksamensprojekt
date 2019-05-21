@@ -25,15 +25,6 @@ content {
 }
 
 
-[aos="fade"] {
-    opacity: 0;
-    transition-property: opacity;
-}
-
-[aos="fade"].aos-animate {
-    opacity: 1;
-}
-
 /*********HEADER**********/
 
 #mobile-button {
@@ -42,11 +33,13 @@ content {
     font-size: 2em;
     align-items: center;
     position: fixed;
-    right: 10vw;
-    top: 11vw;
+    right: 6vw;
+    top: 10vw;
     color: white;
     z-index: 10001;
     cursor: pointer;
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */
 }
 
 #mobile-nav {
@@ -60,12 +53,18 @@ content {
     z-index: 2000;
 }
 
+
+
 #mobile-nav a {
     float: right;
     color: white;
     text-decoration: none;
     padding: 2vw;
     justify-self: end;
+}
+
+#navbar img {
+    max-width: 300px;
 }
 
 
@@ -77,7 +76,7 @@ content {
 
 #navbar {
     overflow: hidden;
-    padding: 10px 5px;
+    padding: 15px 5px;
     /* Large padding which will shrink on scroll (using JS) */
     transition: 0.4s;
     /* Adds a transition effect when the padding is decreased */
