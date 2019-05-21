@@ -6,8 +6,8 @@ document.querySelector("#mobile-button").addEventListener("click", toggleMenu);
 
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.querySelector("#navbar").style.padding = "5px 10px";
-        document.querySelector("#logo img").style.width = "60%";
+        document.querySelector("#navbar").style.padding = "2px 10px";
+        document.querySelector("#logo img").style.width = "50%";
         document.querySelector("#navbar").style.backgroundColor = "rgba(0, 0, 0, 0.58)";
     } else {
         document.querySelector("#navbar").style.padding = "30px 10px";

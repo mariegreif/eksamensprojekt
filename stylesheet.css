@@ -10,8 +10,6 @@ html {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: lightgrey;
 }
 
 header {
@@ -71,7 +69,7 @@ content {
 
 #navbar {
     overflow: hidden;
-    padding: 30px 5px;
+    padding: 10px 5px;
     /* Large padding which will shrink on scroll (using JS) */
     transition: 0.4s;
     /* Adds a transition effect when the padding is decreased */
@@ -87,11 +85,11 @@ content {
 #navbar a {
     float: left;
     color: white;
-    text-align: center;
-    padding: 25px;
+    padding: 5px 15px;
     text-decoration: none;
     font-size: 18px;
     line-height: 15px;
+    align-self: end;
 
 }
 
@@ -117,7 +115,11 @@ content {
 #navbar-right {
     display: none;
     float: right;
-    margin-top: 3vw;
+    margin-top: 35px;
+}
+
+#navbar-right a {
+    margin-right: 25px;
 }
 
 /******* SPLASH VIDEO *********/
@@ -137,7 +139,7 @@ content {
     left: 0;
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 80%;
     pointer-events: none;
 }
 
@@ -151,15 +153,39 @@ content {
     color: white;
 }
 
+/************* MAIN ***************/
+
+#forside-container img {
+    width: 100%;
+    max-width: 800px;
+}
 
 #forside-container {
     min-height: 100%;
-}
-
-#forside-main {
     overflow: auto;
     padding-bottom: 140px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
+
+
+
+#openinghours-text,
+.produkter-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+}
+
+.openinghours-image img {
+    float: right;
+}
+
+.products-image img {
+    float: left;
+}
+
 
 /********** FOOTER ***********/
 footer {
@@ -253,6 +279,22 @@ span img {
         display: none;
     }
 
+    #forside-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .openinghours-text {
+        grid-column-start: 1;
+    }
+
+    .openinghours-image {
+        grid-column-start: 2;
+    }
+
+    .produkter-text {
+        grid-column-start: 2;
+    }
+
     footer {
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
@@ -309,6 +351,12 @@ span img {
         display: none;
     }
 
+    #forside-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
     footer {
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
@@ -352,6 +400,10 @@ span img {
         height: 4vw;
     }
 
+    .produkter-text {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
 
 
 }
