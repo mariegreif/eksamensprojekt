@@ -7,25 +7,56 @@
     <title>HUSK AT ÆNDRE TITEL</title>
     <link rel="stylesheet" href="stylesheet.css">
     <style>
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {}
+        .masonry-gallery {
+            padding: 1.5em;
+            max-width: 960px;
+            margin-right: auto;
+            margin-left: auto;
+            display: grid;
+            grid-template-columns: auto;
+        }
 
 
-        @media (min-width: 1025px) {}
+        img {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 10px;
+            width: 100%;
+            position: relative;
+        }
+
+        .beskrivelse {
+
+            top: 50%;
+        }
+
+
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            .masonry-gallery {
+                grid-template-columns: auto auto;
+            }
+        }
+
+
+
+        @media (min-width: 1025px) {
+            .masonry-gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+        }
     </style>
 </head>
 
 <body>
     <main class="masonry-gallery">
-        <div class="row">
-            <div class="column">
-                <template>
-                    <section class="billede">
-                        <img>
-                        <p class="beskrivelse"></p>
-                    </section>
-                </template>
-            </div>
-        </div>
+        <template>
+            <section class="billeder">
+                <img>
+                <p class="beskrivelse"></p>
+            </section>
+        </template>
 
     </main>
 
