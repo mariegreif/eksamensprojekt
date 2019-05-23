@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUSK AT ÆNDRE TITEL</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="styleGalleri.css">
+    <style>
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+
+        @media (min-width: 1025px) {}
+    </style>
 </head>
 
 <body>
     <main class="masonry-gallery">
+        <div class="row">
+            <div class="column">
+                <template>
+                    <section class="billede">
+                        <img>
+                        <p class="beskrivelse"></p>
+                    </section>
+                </template>
+            </div>
+        </div>
 
-        <template>
-            <section class="billede">
-                <img>
-                <p class="beskrivelse"></p>
-            </section>
-        </template>
     </main>
 
 
@@ -34,7 +43,7 @@
 
 
             //den hentede json filen skal tolkes som json
-            retter = await myJson.json();
+            gallery = await myJson.json();
 
             //Kald funktionen som viser data i DOM
             visBilleder();
@@ -52,7 +61,6 @@
                 dest.appendChild(klon);
             })
         }
-
     </script>
 </body>
 
