@@ -10,6 +10,7 @@ html {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-color: #f2eee6;
 }
 
 header {
@@ -34,7 +35,7 @@ content {
     align-items: center;
     position: fixed;
     right: 6vw;
-    top: 10vw;
+    top: 17vw;
     color: white;
     z-index: 10001;
     cursor: pointer;
@@ -48,7 +49,7 @@ content {
     height: 200px;
     list-style-type: none;
     position: fixed;
-    top: 25vw;
+    top: 6vw;
     right: 16vw;
     z-index: 2000;
 }
@@ -115,25 +116,28 @@ content {
 /* Style the active/current link */
 #navbar a.active {
     border-bottom-style: solid;
-    color: darkorange;
+    color: #F15A25;
 }
 
 /* Display some links to the right */
 #navbar-right {
     display: none;
     float: right;
-    margin-top: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 
 #navbar-right a {
     margin-right: 25px;
+    font-family: 'Viga', sans-serif;
 }
 
 /******* SPLASH VIDEO *********/
 
 .splash-video {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -169,11 +173,13 @@ content {
     margin: 0 auto;
     text-align: center;
     color: white;
+    font-size: 2vw;
+    font-family: 'Viga', sans-serif;
 }
 
 .arrow {
     position: relative;
-    top: 40vw;
+    top: 30vw;
     text-align: center;
     color: white;
     max-width: 1000px;
@@ -222,6 +228,12 @@ content {
     padding-bottom: 140px;
     display: grid;
     grid-template-columns: 1fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Viga', sans-serif;
+    color: #F15A25;
 }
 
 
@@ -468,7 +480,7 @@ span img {
     }
 
     .arrow {
-        top: 20vw;
+        top: 10vw;
     }
 
 }
