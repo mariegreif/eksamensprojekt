@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUSK AT ÆNDRE TITEL</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styleGalleri.css">
+</head>
+
+<body>
+    <main class="masonry-gallery">
+
+        <template>
+            <section class="billede">
+                <img>
+                <p class="beskrivelse"></p>
+            </section>
+        </template>
+    </main>
+
+
+    <script>
+        let gallery = [];
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        //hent JSON fil i asynkron funktion
+        async function hentJson() {
+            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/galleri";
+
+            //henter data filen
+            const myJson = await fetch(url);
+
+
+            //den hentede json filen skal tolkes som json
+            retter = await myJson.json();
+
+            //Kald funktionen som viser data i DOM
+            visBilleder();
+        }
+
+        function visBilleder() {
+            let dest = document.querySelector(".masonry-gallery");
+            let temp = document.querySelector("template");
+
+            gallery.forEach(billede => {
+                let klon = temp.cloneNode(true).content;
+
+                klon.querySelector("img").src = billede.billede.guid;
+                klon.querySelector(".beskrivelse").innerHTML = billede.beskrivelse;
+                dest.appendChild(klon);
+            })
+        }
+
+    </script>
+</body>
+
+</html>
