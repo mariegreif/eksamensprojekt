@@ -8,7 +8,7 @@ document.querySelector("#mobile-button").addEventListener("click", toggleMenu);
 
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.querySelector("#navbar").style.padding = "2px 10px";
+        document.querySelector("#navbar").style.padding = "3px 10px";
         document.querySelector("#logo img").style.width = "70%";
         document.querySelector("#navbar").style.backgroundColor = "rgba(0, 0, 0, 0.58)";
         document.querySelector("#mobile-button").style.top = "1vw";

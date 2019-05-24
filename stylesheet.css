@@ -174,7 +174,6 @@ content {
     margin: 0 auto;
     text-align: center;
     color: white;
-    font-size: 2vw;
     font-family: 'Viga', sans-serif;
 }
 
@@ -430,7 +429,14 @@ span img {
         grid-template-columns: 1fr 1fr;
     }
 
+    .splash-content h1 {
+        font-size: 7vw;
+    }
 
+    .splash-content p {
+        font-size: 2.5vw;
+        font-family: 'Raleway';
+    }
 
     footer {
         grid-template-columns: auto auto auto;
