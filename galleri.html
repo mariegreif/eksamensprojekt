@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUSK AT ÆNDRE TITEL</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         .masonry-gallery {
             padding: 1.5em;
@@ -14,27 +16,89 @@
             margin-left: auto;
             display: grid;
             grid-template-columns: auto;
+
         }
 
 
         img {
             display: inline-block;
             vertical-align: top;
-            margin-bottom: 10px;
             width: 100%;
             position: relative;
         }
 
         .beskrivelse {
-
             top: 50%;
         }
 
+        #splash-gallery {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #splash-gallery img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        #splash-gallery .gallery-content {
+            position: absolute;
+            z-index: 1;
+            max-width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+
+        }
+
+        .gallery-content h1 {
+            font-family: 'Viga', sans-serif;
+            font-size: 10vw;
+        }
+
+        .gallery-content p {
+            font-family: 'Raleway';
+            font-size: 2.5vw;
+        }
+
+        button {
+            display: grid;
+            background-color: white;
+            padding: 10px 10px;
+            text-align: center;
+            width: 100%;
+            margin: 1vw 0;
+            border: none;
+            background: none;
+            border-style: solid;
+            border-color: lightgray;
+            font-family: 'Raleway';
+            color: #F15A25;
+            font-size: 3.5vw;
+        }
 
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
             .masonry-gallery {
                 grid-template-columns: auto auto;
+            }
+
+            #splash-gallery {
+                height: 75%;
+            }
+
+            #splash-gallery .gallery-content {
+                max-width: 500px;
+                margin-top: 5vw;
             }
         }
 
@@ -45,9 +109,57 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
 
+            #splash-gallery {
+                height: 100%;
+            }
+
+            #splash-gallery .gallery-content {
+                max-width: 700px;
+                margin-top: 6vw;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto;
+                grid-gap: 1vw;
+                max-width: 910px;
+                margin: auto auto;
+
+            }
+
+            button {
+                font-size: 2vw;
+
+            }
+
+            .arrow {
+                top: 3vw;
+            }
         }
     </style>
 </head>
+<header>
+    <div id="navbar">
+        <a href="index.html" id="logo"><img src="img/logo-sorttekst.png"></a>
+        <div id="navbar-right">
+            <a href="#home">FORSIDE</a>
+            <a class="active" href="#contact">GALLERI</a>
+            <a href="#events">ARRANGEMANGER</a>
+            <a href="#about">OM ANDERS RAAD</a>
+            <a href="#contact">KONTAKT</a>
+        </div>
+    </div>
+</header>
+<div id="splash-gallery">
+    <img src="img/final.jpg">
+    <div class="gallery-content">
+        <h1>GALLERI</h1>
+        <p>Anders raads produkter er unikke, elegante og en sand skønhed at have i sit hjem.</p>
+        <div class="arrow scroll">
+            <i class="fa fa-arrow-down"></i>
+        </div>
+    </div>
+</div>
 
 <body>
     <nav>
