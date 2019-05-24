@@ -50,18 +50,29 @@
 </head>
 
 <body>
+    <nav>
+        <button class="filter valgt" data-hold="alle">ALLE</button>
+        <button class="filter" data-hold="Skåle">SKÅLE</button>
+        <button class="filter" data-hold="Vase">VASE</button>
+        <button class="filter" data-hold="Dekoration">DEKORATION</button>
+        <button class="filter" data-hold="Drikkeglas">DRIKKEGLAS</button>
+        <button class="filter" data-hold="Øvrigt">ØVRIGT</button>
+
+
+    </nav>
     <main class="masonry-gallery">
-        <template>
-            <section class="billeder">
-                <img>
-                <p class="beskrivelse"></p>
-            </section>
-        </template>
 
     </main>
+    <template>
+        <section class="billeder">
+            <img>
+            <p class="beskrivelse"></p>
+        </section>
+    </template>
 
 
     <script>
+        let filter = "alle";
         let gallery = [];
         document.addEventListener("DOMContentLoaded", hentJson);
 
@@ -81,16 +92,33 @@
         }
 
         function visBilleder() {
+            console.log(filter);
+            document.querySelector(".masonry-gallery").innerHTML = "";
             let dest = document.querySelector(".masonry-gallery");
             let temp = document.querySelector("template");
-
             gallery.forEach(billede => {
-                let klon = temp.cloneNode(true).content;
+                if (filter == "alle" || filter == billede.kategori) {
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("img").src = billede.billede.guid;
+                    klon.querySelector(".beskrivelse").innerHTML = billede.beskrivelse;
 
-                klon.querySelector("img").src = billede.billede.guid;
-                klon.querySelector(".beskrivelse").innerHTML = billede.beskrivelse;
-                dest.appendChild(klon);
+                    dest.appendChild(klon);
+                }
             })
+        }
+        hentJson();
+        document.querySelectorAll(".filter").forEach(but => {
+            but.addEventListener("click", filtrering);
+        })
+
+        function filtrering() {
+            document.querySelectorAll(".filter").forEach(but => {
+                but.classList.remove("valgt");
+            });
+            this.classList.add("valgt");
+            //            document.querySelector("h2").textContent = this.textContent;
+            filter = this.getAttribute("data-hold");
+            visBilleder();
         }
     </script>
 </body>
