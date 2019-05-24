@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUSK AT ÆNDRE TITLEN</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        #splash-omos {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #splash-omos img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        #splash-omos .omos-content {
+            position: absolute;
+            z-index: 1;
+            max-width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+
+        }
+
+        .omos-content h1 {
+            font-family: 'Viga', sans-serif;
+            font-size: 7vw;
+        }
+
+        .omos-content p {
+            font-family: 'Raleway';
+            font-size: 2.5vw;
+        }
+
+        .arrow {
+            display: none;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+            #splash-omos {
+                height: 75%;
+            }
+
+            #splash-omos .omos-content {
+                max-width: 500px;
+                margin-top: 5vw;
+            }
+        }
+
+
+
+        @media (min-width: 1025px) {
+
+            #splash-omos {
+                height: 100%;
+            }
+
+            #splash-omos .omos-content {
+                max-width: 700px;
+                margin-top: 6vw;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto;
+                grid-gap: 1vw;
+                max-width: 910px;
+                margin: auto auto;
+
+            }
+
+            button {
+                font-size: 2vw;
+
+            }
+
+            .arrow {
+                display: block;
+                top: 3vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+    <div id="splash-omos">
+        <img src="img/omos.jpg">
+        <div class="omos-content">
+            <h1>OM OS</h1>
+            <p>Bla bla bla</p>
+            <div class="arrow scroll">
+                <i class="fa fa-arrow-down"></i>
+            </div>
+        </div>
+    </div>
+    <main>
+    </main>
+
+
+</body>
+</html>
