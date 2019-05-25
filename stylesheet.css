@@ -13,18 +13,6 @@ html {
     background-color: #f2eee6;
 }
 
-header {
-    grid-area: hd;
-}
-
-footer {
-    grid-area: ft;
-}
-
-content {
-    grid-area: main;
-}
-
 
 /*********HEADER**********/
 
@@ -35,7 +23,7 @@ content {
     align-items: center;
     position: fixed;
     right: 6vw;
-    top: 5vw;
+    top: 3vw;
     color: white;
     z-index: 10001;
     cursor: pointer;
@@ -64,12 +52,10 @@ content {
     justify-self: end;
 }
 
-#navbar img {
-    max-width: 300px;
-}
 
 
-/*********HEADER DESKTOP AND TABLET************/
+
+/*********HEADER FOR DESKTOP ************/
 
 .hidden {
     transform: scale(0);
@@ -106,6 +92,7 @@ content {
 #logo img {
     transition: 0.4s;
     width: 100%;
+    max-width: 200px;
 }
 
 /* Links on mouse-over */
@@ -130,52 +117,11 @@ content {
 }
 
 #navbar-right a {
-    margin-right: 25px;
+    margin-right: 20px;
     font-family: 'Viga', sans-serif;
 }
 
-/******* SPLASH VIDEO *********/
 
-.splash-video {
-    width: 100%;
-    height: 110vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.splash-video a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-decoration: none;
-}
-
-.splash-video video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-
-.splash-video .splash-content {
-    position: relative;
-    z-index: 1;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    font-family: 'Viga', sans-serif;
-}
 
 .arrow {
     position: relative;
@@ -215,50 +161,6 @@ content {
     }
 }
 
-/************* MAIN ***************/
-
-#forside-container img {
-    width: 100%;
-    max-width: 800px;
-}
-
-#forside-container {
-    min-height: 100%;
-    overflow: auto;
-    padding-bottom: 140px;
-    display: grid;
-    grid-template-columns: 1fr;
-    font-family: 'Roboto', sans-serif;
-}
-
-h2 {
-    font-family: 'Viga', sans-serif;
-    color: #F15A25;
-}
-
-
-
-#openinghours-text {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    align-self: center;
-}
-
-.produkter-text,
-.about-text {
-    max-width: 1000px;
-    margin: 0 auto;
-    align-self: center;
-}
-
-.openinghours-image img {
-    float: right;
-}
-
-.products-image img {
-    float: left;
-}
 
 
 /********** FOOTER ***********/
@@ -340,34 +242,14 @@ span img {
 
 /*********** MEDIA TABLET ************/
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    #mobile-nav {
-        display: none;
+@media only screen and (min-width: 768px) and (max-width: 1116px) {
+    #logo img {
+
+        max-width: 350px;
     }
 
-    #navbar-right {
-        display: block;
-    }
 
-    #mobile-button {
-        display: none;
-    }
 
-    #forside-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .openinghours-text {
-        grid-column-start: 1;
-    }
-
-    .openinghours-image {
-        grid-column-start: 2;
-    }
-
-    .produkter-text {
-        grid-column-start: 2;
-    }
 
     footer {
         grid-template-columns: auto auto auto;
@@ -411,7 +293,12 @@ span img {
 /************ MEDIA DESKTOP **************/
 
 
-@media (min-width: 1025px) {
+@media (min-width: 1116px) {
+
+    #logo img {
+
+        max-width: 330px;
+    }
 
     #mobile-nav {
         display: none;
@@ -425,18 +312,6 @@ span img {
         display: none;
     }
 
-    #forside-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .splash-content h1 {
-        font-size: 7vw;
-    }
-
-    .splash-content p {
-        font-size: 2.5vw;
-        font-family: 'Raleway';
-    }
 
     footer {
         grid-template-columns: auto auto auto;
@@ -479,11 +354,6 @@ span img {
     .footer-some img {
         width: 4vw;
         height: 4vw;
-    }
-
-    .produkter-text {
-        grid-column-start: 2;
-        grid-row-start: 2;
     }
 
     .arrow {

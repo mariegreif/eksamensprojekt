@@ -11,6 +11,133 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /******* SPLASH VIDEO *********/
+
+.splash-video {
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-video a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+}
+
+.splash-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+.splash-video .splash-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: 'Viga', sans-serif;
+}
+
+        /************* MAIN ***************/
+
+#forside-container img {
+    width: 100%;
+    max-width: 800px;
+}
+
+#forside-container {
+    min-height: 100%;
+    overflow: auto;
+    padding-bottom: 140px;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Viga', sans-serif;
+    color: #F15A25;
+}
+
+
+
+#openinghours-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+}
+
+.produkter-text,
+.about-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.openinghours-image img {
+    float: right;
+}
+
+.products-image img {
+    float: left;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1116px) {
+             #forside-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+     .openinghours-text {
+        grid-column-start: 1;
+    }
+
+    .openinghours-image {
+        grid-column-start: 2;
+    }
+
+    .produkter-text {
+        grid-column-start: 2;
+    }
+        }
+
+        @media (min-width: 1116px) {
+             #forside-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .splash-content h1 {
+        font-size: 7vw;
+    }
+
+    .splash-content p {
+        font-size: 2.5vw;
+        font-family: 'Raleway';
+    }
+  .produkter-text {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -46,6 +173,7 @@
             <div class="splash-content">
                 <h1>ANDERS RAAD GLAS</h1>
                 <p>Uddannet glasdesigner fra Danmarks Designskole 1984.</p>
+                <a href="www.youtube.com"><i class="fa fa-play-circle"></i> </a>
                 <div class="arrow scroll">
                     <i class="fa fa-arrow-down"></i>
                 </div>
