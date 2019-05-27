@@ -227,8 +227,8 @@
 
         <section id="forside-container">
             <div id="openinghours-text">
-                <h2>ÅBNINGSTIDER</h2>
-                <p>mandag<br>tirsdag<br>onsdag<br>torsdag<br>fredag</p>
+                <h2 class="forsidetitel"></h2>
+                <p class="forsidetekst"></p>
             </div>
             <div class="openinghours-image">
                 <img src="img/butikken-ny.jpg">
@@ -246,17 +246,8 @@
                 <img src="img/produkter-ny.jpg">
             </div>
             <div class="about-text">
-                <h2>HELLO</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-
-                    Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
+                <h2 class="forsidetitel2"></h2>
+                <p class="forsidetekst2"></p>
             </div>
             <div class="about-img">
                 <img src="img/andersworking.jpg">
@@ -315,15 +306,16 @@
 
             console.log(sektion.id);
             if(sektion.id == "45"){
+           document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
+            document.querySelector(".forsidetekst").innerHTML = sektion.tekst;
             document.querySelector(".forsidetitel1").innerHTML = sektion.overskift_copy;
             document.querySelector(".forsidetekst1").innerHTML = sektion.tekst_copy;
+            document.querySelector(".forsidetitel2").innerHTML = sektion.overskift_copy_copy
+            document.querySelector(".forsidetekst2").innerHTML = sektion.tekst_copy_copy;
 
 
-            }
 
-
-                            })
-
+            }})
 
 
 
