@@ -102,22 +102,131 @@
 
 <body>
 
-    <header>
+       <header>
+        <div id="mobile-button">&#9776;</div>
+        <div id="mobile-nav" class="hidden">
+            <a href="">Forside</a>
+            <a href="">Galleri</a>
+            <a href="">Om Anders Raad</a>
+            <a href="">Kontakt</a>
+        </div>
+
+        <div id="navbar">
+            <a href="omOs.html" id="logo"><img src="img/logo-version2.png"></a>
+
+            <div id="navbar-right">
+                <a href="index.html">FORSIDE</a>
+                <a href="galleri.html">GALLERI</a>
+                <a href="events.html">ARRANGEMANGER</a>
+                <a class="active" href="omOs.html">OM ANDERS RAAD</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </div>
+        </div>
 
     </header>
+
     <div id="splash-omos">
         <img src="img/omos.jpg">
         <div class="omos-content">
-            <h1>OM OS</h1>
+            <h1>Om Anders Raad</h1>
             <p>Bla bla bla</p>
             <div class="arrow scroll">
                 <i class="fa fa-arrow-down"></i>
             </div>
         </div>
     </div>
+
+
     <main>
+     <section class="forside-container">
+            <div class="openinghours-text">
+                <h2 class="omostitel"></h2>
+                <p class="omostekst"></p>
+            </div>
+            <div class="openinghours-image"><img class="omosbillede1"></div>
+
+
+            <div class="produkter-text">
+                <h2 class="omostitel1"></h2>
+                <p class="omostekst1"></p>
+
+            </div>
+            <div class="products-image"><img class="omosbillede2"> </div>
+            <div class="about-text">
+                <h2 class="omostitel2"></h2>
+                <p class="omostekst2"></p>
+            </div>
+            <div class="about-img"><img class="omosbillede3" >    </div>
+        </section>
     </main>
+    <footer>
+        <div class="footer-column-logo">
+            <p>reviews her</p>
+        </div>
+        <div class="footer-column">
+            <span class="address"><img src="img/placeholder.svg">
+                <p>AndersRaad Glas<br>
+                    Traverbanevej 12<br>
+                    2920 Charlottenlund</p>
+            </span>
+            <span class="contact">
+                <img src="img/contact.svg" alt="icon-contact">
+                <p>raadglas@raadglas.dk<br>+45 20 32 48 84
+                </p>
+            </span>
+
+        </div>
+
+        <div class="footer-column">
+            <span class="footer-some"><a href="#"><img src="img/Fb.png"></a>
+                <a href="#"><img src="img/Insta.png"> </a></span>
+
+        </div>
+
+        <div class="footer-last">
+            <p class="footer-text">Copyright 2019 - Raadglas A/S - CVR: 69341823 - Privatlivspolitik - Cookies</p>
+        </div>
+    </footer>
+
+<script>
+
+        document.addEventListener("DOMContentLoaded", hentJson);
 
 
+        let omos;
+
+       async function hentJson() {
+            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/kontakt_omos_events";
+           //henter data filen
+            const myJson = await fetch(url);
+            //den hentede data skal tolkes som json
+            omos = await myJson.json();
+            //kald funktion der viser data i DOM
+
+            visIndhold2();
+       };
+
+        function visIndhold2() {
+            console.log(omos)
+            omos.forEach( sektion=>{
+
+            console.log(sektion.id);
+            if(sektion.id == "69"){
+            document.querySelector(".omostitel").innerHTML = sektion.overskift;
+            document.querySelector(".omostekst").innerHTML = sektion.tekst;
+            document.querySelector(".omosbillede1").src = sektion.image.guid;
+            document.querySelector(".omosbillede2").src = sektion.image_copy.guid;
+            document.querySelector(".omostitel1").innerHTML = sektion.overskift_copy;
+            document.querySelector(".omostekst1").innerHTML = sektion.tekst_copy;
+            document.querySelector(".omostitel2").innerHTML = sektion.overskift_copy_copy
+            document.querySelector(".omostekst2").innerHTML = sektion.tekst_copy_copy;
+            document.querySelector(".omosbillede3").src = sektion.image_copy_copy.guid;
+
+
+
+            }})  } ;
+
+
+    </script>
 </body>
 </html>

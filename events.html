@@ -100,6 +100,28 @@
 </head>
 
 <body>
+      <header>
+        <div id="mobile-button">&#9776;</div>
+        <div id="mobile-nav" class="hidden">
+            <a href="">Forside</a>
+            <a href="">Galleri</a>
+            <a href="">Om Anders Raad</a>
+            <a href="">Kontakt</a>
+        </div>
+
+        <div id="navbar">
+            <a href="events.html" id="logo"><img src="img/logo-version2.png"></a>
+
+            <div id="navbar-right">
+                <a href="index.html">FORSIDE</a>
+                <a href="galleri.html">GALLERI</a>
+                <a class="active" href="events.html">ARRANGEMANGER</a>
+                <a href="omOs.html">OM ANDERS RAAD</a>
+                <a href="kontakt.html">KONTAKT</a>
+            </div>
+        </div>
+
+    </header>
     <div id="splash-events">
         <img src="img/event.jpg">
         <div class="events-content">
@@ -110,7 +132,97 @@
             </div>
         </div>
     </div>
+
+
     <main>
+     <section class="forside-container">
+            <div class="openinghours-text">
+                <h2 class="eventstitel"></h2>
+                <p class="eventstekst"></p>
+            </div>
+            <div class="openinghours-image"><img class="eventsbillede1"></div>
+
+
+            <div class="produkter-text">
+                <h2 class="eventstitel1"></h2>
+                <p class="eventstekst1"></p>
+
+            </div>
+            <div class="products-image"><img class="eventsbillede2"> </div>
+            <div class="about-text">
+                <h2 class="eventstitel2"></h2>
+                <p class="eventstekst2"></p>
+            </div>
+            <div class="about-img"><img class="eventsbillede3" >    </div>
+        </section>
     </main>
+    <footer>
+        <div class="footer-column-logo">
+            <p>reviews her</p>
+        </div>
+        <div class="footer-column">
+            <span class="address"><img src="img/placeholder.svg">
+                <p>AndersRaad Glas<br>
+                    Traverbanevej 12<br>
+                    2920 Charlottenlund</p>
+            </span>
+            <span class="contact">
+                <img src="img/contact.svg" alt="icon-contact">
+                <p>raadglas@raadglas.dk<br>+45 20 32 48 84
+                </p>
+            </span>
+
+        </div>
+
+        <div class="footer-column">
+            <span class="footer-some"><a href="#"><img src="img/Fb.png"></a>
+                <a href="#"><img src="img/Insta.png"> </a></span>
+
+        </div>
+
+        <div class="footer-last">
+            <p class="footer-text">Copyright 2019 - Raadglas A/S - CVR: 69341823 - Privatlivspolitik - Cookies</p>
+        </div>
+    </footer>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+
+        let events;
+
+       async function hentJson() {
+            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/kontakt_omos_events";
+           //henter data filen
+            const myJson = await fetch(url);
+            //den hentede data skal tolkes som json
+            events = await myJson.json();
+            //kald funktion der viser data i DOM
+
+            visIndhold2();
+       };
+
+        function visIndhold2() {
+            console.log(events)
+            events.forEach( sektion=>{
+
+            console.log(sektion.id);
+            if(sektion.id == "70"){
+            document.querySelector(".eventstitel").innerHTML = sektion.overskift;
+            document.querySelector(".eventstekst").innerHTML = sektion.tekst;
+            document.querySelector(".eventsbillede1").src = sektion.image.guid;
+            document.querySelector(".eventsbillede2").src = sektion.image_copy.guid;
+            document.querySelector(".eventstitel1").innerHTML = sektion.overskift_copy;
+            document.querySelector(".eventstekst1").innerHTML = sektion.tekst_copy;
+
+
+
+            }})  } ;
+
+
+    </script>
+
 </body>
 </html>
