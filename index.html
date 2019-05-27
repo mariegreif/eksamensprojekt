@@ -236,17 +236,10 @@
 
 
             <div class="produkter-text">
-                <h2>GLAS SALG</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <h2 class="forsidetitel1"></h2>
+                <p class="forsidetekst1">
 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-
-                    Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur.
-                </p><br>
+                </p>
                 <button>Se mere af glas salget</button>
             </div>
             <div class="products-image">
@@ -299,6 +292,44 @@
         </div>
     </footer>
     <script>
+
+        document.addEventListener("DOMContentLoaded", hentJson2);
+
+
+        let forside;
+
+       async function hentJson2() {
+            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/forside";
+           //henter data filen
+            const myJson = await fetch(url);
+            //den hentede data skal tolkes som json
+            forside = await myJson.json();
+            //kald funktion der viser data i DOM
+
+            visIndhold2();
+       };
+
+        function visIndhold2() {
+            console.log(forside)
+            forside.forEach( sektion=>{
+
+            console.log(sektion.id);
+            if(sektion.id == "45"){
+            document.querySelector(".forsidetitel1").innerHTML = sektion.overskift_copy;
+            document.querySelector(".forsidetekst1").innerHTML = sektion.tekst_copy;
+
+
+            }
+
+
+                            })
+
+
+
+
+       }
+
+        ;
 
 
 
