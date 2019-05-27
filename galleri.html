@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway|Viga&display=swap" rel="stylesheet">
     <style>
         .masonry-gallery {
-            padding: 1.5em;
-            max-width: 960px;
             margin-right: auto;
             margin-left: auto;
             display: grid;
@@ -20,13 +18,25 @@
 
         }
 
+        .billeder img {
+            transition: transform .2s;
+        }
+
+        .billeder img:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            z-index: 2001;
+        }
 
         img {
             display: inline-block;
             vertical-align: top;
             width: 100%;
             position: relative;
+            padding: 0.3em 0.3em;
         }
+
+
 
         .beskrivelse {
             top: 50%;
@@ -91,6 +101,33 @@
             font-size: 3.5vw;
         }
 
+        #popup {
+            top: 0rem;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            overflow: scroll;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.58);
+            z-index: 2000;
+        }
+
+
+        #indhold {
+            position: relative;
+            top: 3rem;
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: white;
+            color: black;
+            padding: 0.5rem 0.5rem 1.5rem;
+        }
+
+        .popupbeskrivelse {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
             .masonry-gallery {
@@ -180,8 +217,8 @@
 
     </nav>
     <main class="masonry-gallery">
-
     </main>
+
     <template>
         <section class="billeder">
             <img>
@@ -189,6 +226,16 @@
         </section>
     </template>
 
+    <div id="popup">
+        <div id="luk">
+
+        </div>
+        <div id="indhold">
+
+            <img class="popupimage">
+            <p class="popupbeskrivelse"></p>
+        </div>
+    </div>
 
     <script>
         let filter = "alle";
@@ -219,12 +266,36 @@
                 if (filter == "alle" || filter == billede.kategori) {
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector("img").src = billede.billede.guid;
-                    klon.querySelector(".beskrivelse").innerHTML = billede.beskrivelse;
+                    //klon.querySelector(".beskrivelse").innerHTML = billede.beskrivelse;
 
                     dest.appendChild(klon);
+                    dest.lastElementChild.addEventListener("click", function() {
+                        visSingle(billede)
+                    });
                 }
             })
+
         }
+
+        function visSingle(billede) {
+            console.log("hej")
+
+            document.querySelector(".popupimage").src = billede.billede.guid;
+            document.querySelector(".popupbeskrivelse").innerHTML = billede.beskrivelse;
+            document.querySelector(".masonry-gallery").style.filter = "blur(8px)";
+
+            document.querySelector("#popup").style.display = "block";
+            document.querySelector("#popup").addEventListener("click", close);
+        }
+
+
+
+
+        function close() {
+            document.querySelector("#popup").style.display = "none";
+            document.querySelector(".masonry-gallery").style.filter = "";
+        }
+
         hentJson();
         document.querySelectorAll(".filter").forEach(but => {
             but.addEventListener("click", filtrering);
