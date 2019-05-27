@@ -19,13 +19,13 @@
         }
 
         .billeder img {
-            transition: transform .2s;
+            transition: transform .4s;
         }
 
         .billeder img:hover {
             cursor: pointer;
-            transform: scale(1.1);
-            z-index: 2001;
+            transform: scale(1.05);
+            z-index: 1000;
         }
 
         img {
@@ -210,8 +210,7 @@
         <button class="filter valgt" data-hold="alle">ALLE</button>
         <button class="filter" data-hold="Skåle">SKÅLE</button>
         <button class="filter" data-hold="Vase">VASE</button>
-        <button class="filter" data-hold="Dekoration">DEKORATION</button>
-        <button class="filter" data-hold="Drikkeglas">DRIKKEGLAS</button>
+        <button class="filter" data-hold="Dekorationer">DEKORATION</button>
         <button class="filter" data-hold="Øvrigt">ØVRIGT</button>
 
 
@@ -244,7 +243,7 @@
 
         //hent JSON fil i asynkron funktion
         async function hentJson() {
-            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/galleri";
+            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/galleri?per_page=100";
 
             //henter data filen
             const myJson = await fetch(url);
