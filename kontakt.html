@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,7 +106,7 @@
 </head>
 
 <body>
-         <header>
+    <header>
         <div id="mobile-button">&#9776;</div>
         <div id="mobile-nav" class="hidden">
             <a href="">Forside</a>
@@ -121,7 +122,7 @@
                 <a href="index.html">FORSIDE</a>
                 <a href="galleri.html">GALLERI</a>
                 <a href="events.html">ARRANGEMANGER</a>
-                <a  href="omOs.html">OM ANDERS RAAD</a>
+                <a href="omOs.html">OM ANDERS RAAD</a>
                 <a class="active" href="kontakt.html">KONTAKT</a>
             </div>
         </div>
@@ -139,11 +140,11 @@
             </div>
         </div>
     </div>
-   <main>
+    <main>
 
 
 
-     <section class="forside-container">
+        <section class="forside-container">
             <div class="openinghours-text">
                 <h2 class="kontakttitel"></h2>
                 <p class="kontakttekst"></p>
@@ -197,74 +198,72 @@
     </footer>
 
 
-   <script>
-
+    <script>
         document.addEventListener("DOMContentLoaded", hentJson);
-       document.addEventListener("DOMContentLoaded", hentJson2);
+        document.addEventListener("DOMContentLoaded", hentJson2);
 
 
         let kontakt;
         let forside;
 
-       async function hentJson() {
+        async function hentJson() {
             const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/kontakt_omos_events";
-           //henter data filen
+            //henter data filen
             const myJson = await fetch(url);
             //den hentede data skal tolkes som json
             kontakt = await myJson.json();
             //kald funktion der viser data i DOM
 
             visIndhold2();
-       };
+        };
 
         function visIndhold2() {
             console.log(kontakt)
-            kontakt.forEach( sektion=>{
+            kontakt.forEach(sektion => {
 
-            console.log(sektion.id);
-            if(sektion.id == "68"){
-//            document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
-//            document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
-            document.querySelector(".kontaktbillede1").src = sektion.image.guid;
-            document.querySelector(".kontaktbillede2").src = sektion.image_copy.guid;
-            document.querySelector(".kontakttitel1").innerHTML = sektion.overskift_copy;
-            document.querySelector(".kontakttekst1").innerHTML = sektion.tekst_copy;
-            document.querySelector(".kontakttitel2").innerHTML = sektion.overskift_copy_copy
-            document.querySelector(".kontakttekst2").innerHTML = sektion.tekst_copy_copy;
-  }})  } ;
+                console.log(sektion.id);
+                if (sektion.id == "68") {
+                    //            document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
+                    //            document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
+                    document.querySelector(".kontaktbillede1").src = sektion.image.guid;
+                    document.querySelector(".kontaktbillede2").src = sektion.image_copy.guid;
+                    document.querySelector(".kontakttitel1").innerHTML = sektion.overskift_copy;
+                    document.querySelector(".kontakttekst1").innerHTML = sektion.tekst_copy;
+                    document.querySelector(".kontakttitel2").innerHTML = sektion.overskift_copy_copy
+                    document.querySelector(".kontakttekst2").innerHTML = sektion.tekst_copy_copy;
+                }
+            })
+        };
 
-//     Henter åbeningstider fra forsiden, så når man ændrer på forsidernes åbeningstider, så ændre den det også her på kontakt.
+        //     Henter åbeningstider fra forsiden, så når man ændrer på forsidernes åbeningstider, så ændre den det også her på kontakt.
 
-       async function hentJson2() {
+        async function hentJson2() {
             const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/forside";
-           //henter data filen
+            //henter data filen
             const myJson = await fetch(url);
             //den hentede data skal tolkes som json
             forside = await myJson.json();
             //kald funktion der viser data i DOM
 
             visIndhold3();
-       };
+        };
 
         function visIndhold3() {
             console.log(forside)
-            forside.forEach( sektion=>{
+            forside.forEach(sektion => {
 
-            console.log(sektion.id);
-            if(sektion.id == "45"){
-            document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
-            document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
+                console.log(sektion.id);
+                if (sektion.id == "45") {
+                    document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
+                    document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
 
-            }})  } ;
-
-
-
-
-
-
+                }
+            })
+        };
 
     </script>
 
-
+    <script src="script.js"></script>
 </body>
+
 </html>

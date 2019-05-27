@@ -20,6 +20,19 @@
 
         .billeder img {
             transition: transform .4s;
+            animation-name: zoom;
+            animation-duration: 0.3s;
+
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
         }
 
         .billeder img:hover {
@@ -40,6 +53,21 @@
 
         .beskrivelse {
             top: 50%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            cursor: pointer;
         }
 
         #splash-gallery {
@@ -110,6 +138,8 @@
             display: none;
             background-color: rgba(0, 0, 0, 0.58);
             z-index: 2000;
+            animation-name: zoom;
+            animation-duration: 0.8s;
         }
 
 
@@ -179,6 +209,7 @@
                 top: 3vw;
             }
         }
+
     </style>
 </head>
 <header>
@@ -233,6 +264,7 @@
 
             <img class="popupimage">
             <p class="popupbeskrivelse"></p>
+            <div class="close">&times;</div>
         </div>
     </div>
 
@@ -278,13 +310,14 @@
 
         function visSingle(billede) {
             console.log("hej")
-
+            let luk = document.querySelector(".close");
             document.querySelector(".popupimage").src = billede.billede.guid;
             document.querySelector(".popupbeskrivelse").innerHTML = billede.beskrivelse;
             document.querySelector(".masonry-gallery").style.filter = "blur(8px)";
 
             document.querySelector("#popup").style.display = "block";
-            document.querySelector("#popup").addEventListener("click", close);
+            document.querySelector(".close").addEventListener("click", close);
+            luk.addEventListener("click", close);
         }
 
 
@@ -309,7 +342,9 @@
             filter = this.getAttribute("data-hold");
             visBilleder();
         }
+
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
