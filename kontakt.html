@@ -200,9 +200,11 @@
    <script>
 
         document.addEventListener("DOMContentLoaded", hentJson);
+       document.addEventListener("DOMContentLoaded", hentJson2);
 
 
         let kontakt;
+        let forside;
 
        async function hentJson() {
             const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/kontakt_omos_events";
@@ -221,23 +223,47 @@
 
             console.log(sektion.id);
             if(sektion.id == "68"){
-            document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
-            document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
+//            document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
+//            document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
             document.querySelector(".kontaktbillede1").src = sektion.image.guid;
             document.querySelector(".kontaktbillede2").src = sektion.image_copy.guid;
             document.querySelector(".kontakttitel1").innerHTML = sektion.overskift_copy;
             document.querySelector(".kontakttekst1").innerHTML = sektion.tekst_copy;
             document.querySelector(".kontakttitel2").innerHTML = sektion.overskift_copy_copy
             document.querySelector(".kontakttekst2").innerHTML = sektion.tekst_copy_copy;
+  }})  } ;
 
+//     Henter åbeningstider fra forsiden, så når man ændrer på forsidernes åbeningstider, så ændre den det også her på kontakt.
 
+       async function hentJson2() {
+            const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/forside";
+           //henter data filen
+            const myJson = await fetch(url);
+            //den hentede data skal tolkes som json
+            forside = await myJson.json();
+            //kald funktion der viser data i DOM
 
+            visIndhold3();
+       };
+
+        function visIndhold3() {
+            console.log(forside)
+            forside.forEach( sektion=>{
+
+            console.log(sektion.id);
+            if(sektion.id == "45"){
+            document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
+            document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
 
             }})  } ;
 
 
-    </script>
 
+
+
+
+
+    </script>
 
 
 </body>
