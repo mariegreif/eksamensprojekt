@@ -22,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 30px solid black;
 }
 
 .splash-video a {
@@ -85,12 +86,12 @@
 
         /************* MAIN ***************/
 
-#forside-container img {
+.forside-container img {
     width: 100%;
     max-width: 800px;
 }
 
-#forside-container {
+.forside-container {
     min-height: 100%;
     overflow: auto;
     padding-bottom: 140px;
@@ -101,7 +102,7 @@
 
 
 
-#openinghours-text {
+.openinghours-text {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -124,7 +125,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1116px) {
-             #forside-container {
+             .forside-container {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -154,7 +155,7 @@
         }
 
         @media (min-width: 1116px) {
-             #forside-container {
+             .forside-container {
         grid-template-columns: 1fr 1fr;
 /*
          max-width: 1600px;
@@ -202,9 +203,9 @@
             <div id="navbar-right">
                 <a class="active" href="#home">FORSIDE</a>
                 <a href="galleri.html">GALLERI</a>
-                <a href="#events">ARRANGEMANGER</a>
-                <a href="#about">OM ANDERS RAAD</a>
-                <a href="#contact">KONTAKT</a>
+                <a href="events.html">ARRANGEMANGER</a>
+                <a href="omOs.html">OM ANDERS RAAD</a>
+                <a href="kontakt.html">KONTAKT</a>
             </div>
         </div>
 
@@ -225,14 +226,12 @@
             </div>
         </div>
 
-        <section id="forside-container">
-            <div id="openinghours-text">
+        <section class="forside-container">
+            <div class="openinghours-text">
                 <h2 class="forsidetitel"></h2>
                 <p class="forsidetekst"></p>
             </div>
-            <div class="openinghours-image">
-                <img src="img/butikken-ny.jpg">
-            </div>
+            <div class="openinghours-image"><img class="forsidebillede1"></div>
 
 
             <div class="produkter-text">
@@ -242,16 +241,12 @@
                 </p>
                 <button>Se mere af glas salget</button>
             </div>
-            <div class="products-image">
-                <img src="img/produkter-ny.jpg">
-            </div>
+            <div class="products-image"><img class="forsidebillede2"> </div>
             <div class="about-text">
                 <h2 class="forsidetitel2"></h2>
                 <p class="forsidetekst2"></p>
             </div>
-            <div class="about-img">
-                <img src="img/andersworking.jpg">
-            </div>
+            <div class="about-img"><img class="forsidebillede3" >    </div>
         </section>
     </main>
     <footer>
@@ -308,23 +303,17 @@
             if(sektion.id == "45"){
            document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
             document.querySelector(".forsidetekst").innerHTML = sektion.tekst;
+            document.querySelector(".forsidebillede1").src = sektion.image.guid;
+            document.querySelector(".forsidebillede2").src = sektion.image_copy.guid;
             document.querySelector(".forsidetitel1").innerHTML = sektion.overskift_copy;
             document.querySelector(".forsidetekst1").innerHTML = sektion.tekst_copy;
             document.querySelector(".forsidetitel2").innerHTML = sektion.overskift_copy_copy
             document.querySelector(".forsidetekst2").innerHTML = sektion.tekst_copy_copy;
+            document.querySelector(".forsidebillede3").src = sektion.image_copy_copy.guid;
 
 
 
-            }})
-
-
-
-       }
-
-        ;
-
-
-
+            }})  } ;
 
 
     </script>
