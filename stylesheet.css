@@ -23,6 +23,11 @@ h2 {
     font-family: 'Viga', sans-serif;
     color: #F15A25;
     font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+
 }
 
 h3 {
@@ -35,7 +40,7 @@ h3 {
 
 p {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /*********HEADER**********/
@@ -189,6 +194,11 @@ p {
 
 /*Ændringer efter 27/05*/
 
+.produkter-text p {
+    font-size: 1.7rem;
+    font-weight: 600;
+
+}
 
 .forside-container img {
     width: 100%;
@@ -208,24 +218,15 @@ p {
 
 
 
-/*
-    {
-    max-width: 1000px;
-    margin: 1vw auto;
-    text-align: center;
-    align-self: center;
-}
-*/
 
 .openinghours-text,
 .produkter-text,
 .about-text {
     max-width: 1000px;
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
+    margin: 1rem 1rem 1rem 1rem;
     line-height: 1.8rem;
+
 }
 
 .openinghours-image img {
@@ -236,37 +237,37 @@ p {
     float: left;
 }
 
+/*
 .openinghours-text h2 {
     text-align: center;
-    padding-bottom: 2vw;
+    padding-bottom: 5vw;
+    padding-top: 5vw;
 }
+*/
 
+/*
 .produkter-text h2 {
-    padding-bottom: 1vw;
+    padding-bottom: 1rem;
 }
+*/
 
+/*
 .about-text h2 {
     text-align: center;
-    padding-bottom: 2vw;
+    padding-bottom: 1rem;
 }
+*/
 
-.about-text a {
-    color: #F15A25;
-    place-self: center;
-    font-size: 1.2rem;
-}
-
+.about-text a,
+.produkter-text a,
 .openinghours-text a {
     color: #F15A25;
     place-self: center;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.produkter-text a {
-    color: #F15A25;
-    place-self: center;
-    font-size: 1.2rem;
-}
+
 
 /********** FOOTER ***********/
 footer {
@@ -407,7 +408,7 @@ span img {
     }
 
     .splash-content p {
-        font-size: 2.5vw;
+        font-size: 2rem;
     }
 
     .splash-content a {
@@ -535,3 +536,5 @@ span img {
     }
 
 }
+
+
