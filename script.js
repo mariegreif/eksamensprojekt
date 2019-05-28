@@ -12,13 +12,13 @@ function scrollFunction() {
         document.querySelector("#logo img").style.width = "75%";
         document.querySelector("#navbar").style.backgroundColor = "rgba(0, 0, 0, 0.58)";
         document.querySelector("#mobile-button").style.top = "1vw";
-        document.querySelector("#mobile-nav").style.top = "10vw";
+        document.querySelector("#mobile-nav").style.top = "3.4rem";
     } else {
         document.querySelector("#navbar").style.padding = "20px 10px";
         document.querySelector("#logo img").style.width = "100%";
         document.querySelector("#navbar").style.backgroundColor = "";
         document.querySelector("#mobile-button").style.top = "6vw";
-        document.querySelector("#mobile-nav").style.top = "1vw";
+        document.querySelector("#mobile-nav").style.top = "5rem";
     }
 }
 

@@ -61,19 +61,21 @@ p {
     height: 200px;
     list-style-type: none;
     position: fixed;
-    top: 6vw;
-    right: 16vw;
+    top: 4rem;
+    right: 0;
     z-index: 2000;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    text-align: center;
 }
 
 
 
 #mobile-nav a {
-    float: right;
     color: white;
     text-decoration: none;
-    padding: 2vw;
-    justify-self: end;
+    padding: 3vw;
+    font-family: 'Viga', sans-serif;
 }
 
 
