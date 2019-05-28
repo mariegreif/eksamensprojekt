@@ -22,10 +22,13 @@ h1 {
 h2 {
     font-family: 'Viga', sans-serif;
     color: #F15A25;
+    font-size: 2.5rem;
+
 }
 
 p {
     font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
 }
 
 /*********HEADER**********/
@@ -370,16 +373,18 @@ span img {
     .splash-content a {
        left: 29vw;
     }
-        }
 
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+ }
+
+/************ MEDIA DESKTOP **************/
         @media (min-width: 1116px) {
              .forside-container {
         grid-template-columns: 1fr 1fr;
-/*
-         max-width: 1600px;
-         margin-left: 8vw;
-        margin-right: 8vw;
-*/
 
     }
 
@@ -400,13 +405,17 @@ span img {
                 left: 31vw;
             }
 
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
 }
 
+            h2{
+                font-size: 3rem;
 
-/************ MEDIA DESKTOP **************/
+            }
 
-
-@media (min-width: 1116px) {
 
     #logo img {
 
