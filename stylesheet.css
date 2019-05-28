@@ -194,7 +194,7 @@ p {
 
 /*Ændringer efter 27/05*/
 
-.produkter-text p {
+#produkter-textforside p {
     font-size: 1.7rem;
     font-weight: 600;
 
@@ -202,7 +202,7 @@ p {
 
 .forside-container img {
     width: 100%;
-    max-width: 800px;
+/*    max-width: 800px;*/
 }
 
 .forside-container {
@@ -212,7 +212,7 @@ p {
     position: relative;
     grid-template-columns: 1fr;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: -5px;
+/*    margin-bottom: -5px;*/
 
 }
 
@@ -222,7 +222,7 @@ p {
 .openinghours-text,
 .produkter-text,
 .about-text {
-    max-width: 1000px;
+/*    max-width: 1000px;*/
     margin: 0 auto;
     margin: 1rem 1rem 1rem 1rem;
     line-height: 1.8rem;
@@ -340,6 +340,7 @@ span img {
 }
 
 
+
 /*********** MEDIA TABLET ************/
 
 @media only screen and (min-width: 768px) and (max-width: 1116px) {
@@ -349,7 +350,29 @@ span img {
     }
 
 
+    h2{
+        font-size: 3.5rem;
+        margin: 0.2rem 1.2rem 1rem 1.2rem;
+        line-height: 4rem;
 
+    }
+
+ p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+ .about-text a,
+.produkter-text a,
+.openinghours-text a {
+    color: #F15A25;
+    place-self: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+
+
+    }
 
     footer {
         grid-template-columns: auto auto auto;
@@ -387,6 +410,14 @@ span img {
         margin: 2vw;
     }
 
+     #produkter-textforside p {
+        font-size: 2.2rem;
+        line-height: 3rem;
+
+
+    }
+/*
+
     .forside-container {
         grid-template-columns: 1fr;
     }
@@ -402,24 +433,25 @@ span img {
     .produkter-text {
         grid-column-start: 2;
     }
+*/
 
     .splash-content h1 {
         font-size: 7vw;
     }
 
     .splash-content p {
-        font-size: 2rem;
+        font-size: 3rem;
+        line-height: 3.5rem;
     }
 
+/*
     .splash-content a {
         left: 29vw;
     }
 
+*/
 
-    p {
-        font-family: 'Raleway', sans-serif;
-        font-size: 2rem;
-    }
+
 }
 
 /************ MEDIA DESKTOP **************/
@@ -451,13 +483,39 @@ span img {
 
     p {
         font-family: 'Raleway', sans-serif;
-        font-size: 1.3rem;
+        font-size: 2vw;
+        line-height: 2.5vw;
     }
 
     h2 {
-        font-size: 2.4rem;
+        font-size: 3vw;
+        line-height: 3vw;
+
 
     }
+
+    #produkter-textforside p {
+        font-size: 2vw;
+        line-height: 2.5vw;
+
+
+    }
+
+.about-text,
+.produkter-text,
+.openinghours-text {
+    margin: 1vw 3vw 1vw 3vw;
+
+
+
+    }
+
+    #produkter-textforside{
+    margin: 1vw 3vw 1vw 15vw;;
+
+
+    }
+
 
 
     #logo img {
@@ -537,4 +595,5 @@ span img {
 
 }
 
-
+@media only screen and (min-width: 1117px) and (max-width: 1800px) {
+}
