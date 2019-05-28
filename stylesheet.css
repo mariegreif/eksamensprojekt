@@ -239,6 +239,7 @@ p {
 footer {
     display: grid;
     grid-template-columns: 1fr;
+
     text-decoration: none;
     list-style-type: none;
     background: rgba(0, 0, 0, 0.69);
@@ -251,7 +252,10 @@ footer {
 
 }
 
-
+.footerreview {
+    width: 200px;
+    ;
+}
 
 span {
     display: grid;
@@ -262,6 +266,8 @@ span {
 
 .footer-column {
     justify-self: center;
+    margin-top: 2rem;
+
 }
 
 span img {
@@ -277,28 +283,18 @@ span img {
 
 .footer-column p {
     color: white;
+    font-size: 1rem;
 }
 
-.footer-some {
-    display: grid;
+.footer-some img {
+    width: 100px;
 
 }
 
 .footer-some img {
-    width: 8vw;
-    height: 8vw;
-}
-
-.footer-column-logo img {
-    margin-top: 1.5vw;
-
-
-}
-
-.footer-column-logo {
-    text-align: center;
-
-
+    width: 11vw;
+    height: 11vw;
+    margin: 1vw;
 }
 
 .footer-last {
@@ -450,7 +446,7 @@ span img {
 
 
     footer {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
     }
 
@@ -487,13 +483,15 @@ span img {
         margin: 2vw;
     }
 
-    .footer-some img {
-        width: 4vw;
-        height: 4vw;
-    }
-
     .arrow {
         top: 10vw;
+    }
+
+    .footer-some img {
+
+        width: 6vw;
+        height: 6vw;
+        margin-left: 0;
     }
 
 }

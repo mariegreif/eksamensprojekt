@@ -83,7 +83,7 @@
 }
 
     </style>
-    </head>
+</head>
 
 
 <body>
@@ -130,7 +130,7 @@
             <div class="openinghours-text">
                 <h2 class="forsidetitel1"></h2>
                 <p class="forsidetekst1"></p>
-                 <button>Se mere af glas salget</button>
+                <button>Se mere af glas salget</button>
             </div>
             <div class="openinghours-image"><img class="forsidebillede1"></div>
 
@@ -147,7 +147,7 @@
                 <h2 class="forsidetitel2"></h2>
                 <p class="forsidetekst2"></p>
             </div>
-            <div class="about-img"><img class="forsidebillede3" >    </div>
+            <div class="about-img"><img class="forsidebillede3"> </div>
         </section>
     </main>
 
@@ -156,13 +156,13 @@
 
 
     <footer>
-        <div class="footer-column-logo">
-          <a href="https://search.google.com/local/writereview?placeid=ChIJW5WYLJxNUkYR4bawLoRZoFs" target="_blank"><img class="footerreview" src="img/starsgoogle.png" alt="Google reviews"></a>
+        <div class="footer-column">
+            <a href="https://search.google.com/local/writereview?placeid=ChIJW5WYLJxNUkYR4bawLoRZoFs" target="_blank"><img class="footerreview" src="img/starsgoogle.png" alt="Google reviews"></a>
 
         </div>
         <div class="footer-column">
             <span class="address">
-               <a target="_blank" href="https://www.google.com/maps/place/Anders+Raad+Glas/@55.7536322,12.5833771,916m/data=!3m1!1e3!4m5!3m4!1s0x46524d9c2c98955b:0x5ba059842eb0b6e1!8m2!3d55.7535027!4d12.5852807"><img src="img/placeholder.svg"></a>
+                <a target="_blank" href="https://www.google.com/maps/place/Anders+Raad+Glas/@55.7536322,12.5833771,916m/data=!3m1!1e3!4m5!3m4!1s0x46524d9c2c98955b:0x5ba059842eb0b6e1!8m2!3d55.7535027!4d12.5852807"><img src="img/placeholder.svg"></a>
                 <p>AndersRaad Glas<br>
                     Traverbanevej 12<br>
                     2920 Charlottenlund</p>
@@ -176,8 +176,9 @@
         </div>
 
         <div class="footer-column">
-            <span class="footer-some"><a href="#"><img src="img/Fb.png"></a>
-                <a href="#"><img src="img/Insta.png"> </a></span>
+            <div class="footer-some">
+                <a href="#"><img src="img/Fb.png"></a>
+                <a href="#"><img src="img/Insta.png"> </a></div>
 
         </div>
 
@@ -186,44 +187,43 @@
         </div>
     </footer>
     <script>
-
         document.addEventListener("DOMContentLoaded", hentJson2);
 
 
         let forside;
 
-       async function hentJson2() {
+        async function hentJson2() {
             const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/forside";
-           //henter data filen
+            //henter data filen
             const myJson = await fetch(url);
             //den hentede data skal tolkes som json
             forside = await myJson.json();
             //kald funktion der viser data i DOM
 
             visIndhold2();
-       };
+        };
 
         function visIndhold2() {
             console.log(forside)
-            forside.forEach( sektion=>{
+            forside.forEach(sektion => {
 
-            console.log(sektion.id);
-            if(sektion.id == "45"){
-           document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
-            document.querySelector(".forsidetekst").innerHTML = sektion.tekst;
-            document.querySelector(".forsidebillede1").src = sektion.image.guid;
-            document.querySelector(".forsidebillede2").src = sektion.image_copy.guid;
-            document.querySelector(".forsidetitel1").innerHTML = sektion.overskift_copy;
-            document.querySelector(".forsidetekst1").innerHTML = sektion.tekst_copy;
-            document.querySelector(".forsidetitel2").innerHTML = sektion.overskift_copy_copy
-            document.querySelector(".forsidetekst2").innerHTML = sektion.tekst_copy_copy;
-            document.querySelector(".forsidebillede3").src = sektion.image_copy_copy.guid;
-
-
-
-            }})  } ;
+                console.log(sektion.id);
+                if (sektion.id == "45") {
+                    document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
+                    document.querySelector(".forsidetekst").innerHTML = sektion.tekst;
+                    document.querySelector(".forsidebillede1").src = sektion.image.guid;
+                    document.querySelector(".forsidebillede2").src = sektion.image_copy.guid;
+                    document.querySelector(".forsidetitel1").innerHTML = sektion.overskift_copy;
+                    document.querySelector(".forsidetekst1").innerHTML = sektion.tekst_copy;
+                    document.querySelector(".forsidetitel2").innerHTML = sektion.overskift_copy_copy
+                    document.querySelector(".forsidetekst2").innerHTML = sektion.tekst_copy_copy;
+                    document.querySelector(".forsidebillede3").src = sektion.image_copy_copy.guid;
 
 
+
+                }
+            })
+        };
     </script>
 
     <script src="script.js"></script>
