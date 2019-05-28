@@ -20,8 +20,7 @@
 
         .billeder img {
             transition: transform .4s;
-            animation-name: zoom;
-            animation-duration: 0.3s;
+
 
         }
 
@@ -57,17 +56,20 @@
 
         .close {
             position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
+            top: 12px;
+            right: 12px;
+            color: black;
+            background: white;
             font-size: 40px;
             font-weight: bold;
             transition: 0.3s;
+            padding-left: 0.5vw
         }
 
         .close:hover,
         .close:focus {
             cursor: pointer;
+            color: #F15A25;
         }
 
         #splash-gallery {
@@ -113,20 +115,26 @@
             display: none;
         }
 
-        button {
+        .filter {
             display: grid;
             background-color: white;
-            padding: 10px 10px;
+            padding: 5px 10px;
             text-align: center;
             width: 100%;
             margin: 1vw 0;
             border: none;
             background: none;
             border-style: solid;
-            border-color: lightgray;
+            border-color: rgba(0, 0, 0, 0.58);
+            border-width: 0.01vw;
             font-family: 'Raleway';
             color: #F15A25;
-            font-size: 3.5vw;
+            font-size: 1.7rem;
+        }
+
+        .filter:hover {
+            background-color: #F15A25;
+            color: white;
         }
 
         #popup {
@@ -136,12 +144,34 @@
             position: fixed;
             overflow: scroll;
             display: none;
-            background-color: rgba(0, 0, 0, 0.58);
+            /*            background-color: rgba(0, 0, 0, 0.58);*/
             z-index: 2000;
-            animation-name: zoom;
-            animation-duration: 0.8s;
+            /*
+animation-name: zoom;
+animation-duration: 0.8s;
+*/
         }
 
+        .button {
+            padding: 10px 15px 10px 20px;
+            border: none;
+            color: black;
+            background: white;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 45%;
+
+
+
+        }
+
+        #next {
+            right: 0;
+        }
+
+        #prew {
+            left: 0;
+        }
 
         #indhold {
             position: relative;
@@ -199,11 +229,6 @@
 
             }
 
-            button {
-                font-size: 1.2vw;
-
-            }
-
             .arrow {
                 display: block;
                 top: 3vw;
@@ -212,6 +237,7 @@
     </style>
 </head>
 <header>
+
     <div id="mobile-button">&#9776;</div>
     <div id="mobile-nav" class="hidden">
         <a href="index.html">Forside</a>
@@ -273,6 +299,9 @@
             <img class="popupimage">
             <p class="popupbeskrivelse"></p>
             <div class="close">&times;</div>
+            <button id="prew" class="button"><i class="fa fa-angle-left"></i></button>
+            <button id="next" class="button"><i class="fa fa-angle-right"></i>
+            </button>
         </div>
     </div>
     <footer>
@@ -330,12 +359,13 @@
             //Kald funktionen som viser data i DOM
             visBilleder();
         }
+        let dest = document.querySelector(".masonry-gallery");
+        let temp = document.querySelector("template");
 
         function visBilleder() {
             console.log(filter);
             document.querySelector(".masonry-gallery").innerHTML = "";
-            let dest = document.querySelector(".masonry-gallery");
-            let temp = document.querySelector("template");
+
             gallery.forEach(billede => {
                 if (filter == "alle" || filter == billede.kategori) {
                     let klon = temp.cloneNode(true).content;
@@ -355,12 +385,14 @@
             console.log("hej")
             let luk = document.querySelector(".close");
             document.querySelector(".popupimage").src = billede.billede.guid;
-            document.querySelector(".popupbeskrivelse").innerHTML = billede.beskrivelse;
-            document.querySelector(".masonry-gallery").style.filter = "blur(8px)";
+            //document.querySelector(".popupbeskrivelse").innerHTML = billede.beskrivelse;
+            document.querySelector("main").style.filter = "blur(8px)";
 
             document.querySelector("#popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", close);
             luk.addEventListener("click", close);
+            document.querySelector("button").addEventListener("click", nextImage);
+            console.log("test")
         }
 
 
@@ -384,6 +416,18 @@
             //            document.querySelector("h2").textContent = this.textContent;
             filter = this.getAttribute("data-hold");
             visBilleder();
+        }
+
+
+        var i = temp.length;
+
+        function nextImage() {
+            if (i > temp.length) {
+                i = i + 1;
+            } else {
+                i = 1;
+            }
+            temp.innerHTML = "dest[i - 1]";
         }
     </script>
     <script src="script.js"></script>
