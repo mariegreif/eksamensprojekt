@@ -199,18 +199,22 @@ p {
 
 
 
-.openinghours-text {
+/*
+    {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 1vw auto;
     text-align: center;
     align-self: center;
 }
+*/
 
+.openinghours-text,
 .produkter-text,
 .about-text {
     max-width: 1000px;
     margin: 0 auto;
-    align-self: center;
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
 
 .openinghours-image img {
@@ -221,6 +225,15 @@ p {
     float: left;
 }
 
+.openinghours-text h2 {
+    text-align: center;
+}
+
+.produkter-text h2 {}
+
+.about-text h2 {
+    text-align: center;
+}
 
 /********** FOOTER ***********/
 footer {
@@ -346,11 +359,11 @@ span img {
         margin: 2vw;
     }
 
-     .forside-container {
+    .forside-container {
         grid-template-columns: 1fr 1fr;
     }
 
-     .openinghours-text {
+    .openinghours-text {
         grid-column-start: 1;
     }
 
@@ -362,7 +375,7 @@ span img {
         grid-column-start: 2;
     }
 
-     .splash-content h1 {
+    .splash-content h1 {
         font-size: 7vw;
     }
 
@@ -371,19 +384,19 @@ span img {
     }
 
     .splash-content a {
-       left: 29vw;
+        left: 29vw;
     }
 
 
-p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
+    p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+    }
 }
- }
 
 /************ MEDIA DESKTOP **************/
-        @media (min-width: 1116px) {
-             .forside-container {
+@media (min-width: 1116px) {
+    .forside-container {
         grid-template-columns: 1fr 1fr;
 
     }
@@ -395,26 +408,27 @@ p {
     .splash-content p {
         font-size: 2.5vw;
     }
-  .produkter-text {
+
+    .produkter-text {
         grid-column-start: 2;
         grid-row-start: 2;
     }
 
-            .splash-content a {
-                top: 13vw;
-                left: 31vw;
-            }
+    .splash-content a {
+        top: 13vw;
+        left: 31vw;
+    }
 
 
-p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
-}
+    p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5rem;
+    }
 
-            h2{
-                font-size: 3rem;
+    h2 {
+        font-size: 3rem;
 
-            }
+    }
 
 
     #logo img {
@@ -483,5 +497,3 @@ p {
     }
 
 }
-
-
