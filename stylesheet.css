@@ -23,6 +23,13 @@ h2 {
     font-family: 'Viga', sans-serif;
     color: #F15A25;
     font-size: 2.5rem;
+}
+
+h3 {
+    font-family: 'Viga', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 2vw;
 
 }
 
@@ -239,14 +246,13 @@ p {
 footer {
     display: grid;
     grid-template-columns: 1fr;
-
     text-decoration: none;
     list-style-type: none;
     background: rgba(0, 0, 0, 0.69);
     margin-top: auto;
     width: 100%;
     clear: both;
-    align-items: center;
+    /*    align-items: center;*/
     bottom: 0;
     clear: both;
 
@@ -254,7 +260,6 @@ footer {
 
 .footerreview {
     width: 200px;
-    ;
 }
 
 span {
@@ -266,7 +271,7 @@ span {
 
 .footer-column {
     justify-self: center;
-    margin-top: 2rem;
+    padding-top: 0.7rem;
 
 }
 
@@ -469,18 +474,14 @@ span img {
     .address p,
     .contact p {
         padding: 0;
-        margin: 2vw;
+        margin: 1.5vw;
 
-    }
-
-    .footer-column-logo img {
-        width: 75%;
     }
 
     span img {
-        width: 5vw;
+        width: 4vw;
         align-self: center;
-        margin: 2vw;
+        margin: 1.5vw 2vw;
     }
 
     .arrow {
@@ -492,6 +493,18 @@ span img {
         width: 6vw;
         height: 6vw;
         margin-left: 0;
+    }
+
+    .footer-some {
+        margin: 5vw 0;
+    }
+
+    .footerreview {
+        margin: 5vw 0;
+    }
+
+    .center {
+        margin: 2.5vw 0;
     }
 
 }
