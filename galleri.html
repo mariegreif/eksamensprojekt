@@ -353,20 +353,7 @@ animation-duration: 0.8s;
     <script>
         let filter = "alle";
         let gallery = [];
-        let arrow = document.querySelector(".arrow");
 
-        arrow.addEventListener("click", smoothScroll);
-
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        function smoothScroll() {
-            console.log("scroll");
-            window.scrollTo({
-                top: 500,
-                left: 500,
-                behavior: 'smooth'
-            });
-        }
 
         //hent JSON fil i asynkron funktion
         async function hentJson() {
