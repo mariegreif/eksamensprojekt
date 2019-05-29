@@ -62,7 +62,7 @@ p {
 #mobile-nav {
     display: grid;
     width: 100%;
-    height: 230px;
+    height: auto;
     list-style-type: none;
     position: fixed;
     top: 4rem;
@@ -196,18 +196,19 @@ p {
 
 
 
-.googlemaps{
-    overflow:hidden;
-    padding-bottom:80%;
-    position:relative;
-    height:0;
+.googlemaps {
+    overflow: hidden;
+    padding-bottom: 80%;
+    position: relative;
+    height: 0;
 }
-.googlemaps iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+
+.googlemaps iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 
@@ -222,7 +223,7 @@ p {
 
 .forside-container img {
     width: 100%;
-/*    max-width: 800px;*/
+    /*    max-width: 800px;*/
 }
 
 .forside-container {
@@ -232,7 +233,7 @@ p {
     position: relative;
     grid-template-columns: 1fr;
     font-family: 'Roboto', sans-serif;
-/*    margin-bottom: -5px;*/
+    /*    margin-bottom: -5px;*/
 
 }
 
@@ -242,7 +243,7 @@ p {
 .openinghours-text,
 .produkter-text,
 .about-text {
-/*    max-width: 1000px;*/
+    /*    max-width: 1000px;*/
     margin: 0 auto;
     margin: 1vw 1vw 1vw 1vw;
     line-height: 1.8rem;
@@ -370,26 +371,27 @@ span img {
     }
 
 
-    h2{
+    h2 {
         font-size: 3.5rem;
         margin: 0.2rem 1.2rem 1rem 1.2rem;
         line-height: 4rem;
 
     }
 
- p {
+    p {
         font-family: 'Raleway', sans-serif;
         font-size: 2rem;
         line-height: 2.5rem;
     }
- .about-text a,
-.produkter-text a,
-.openinghours-text a {
-    color: #F15A25;
-    place-self: center;
-    font-size: 2.3rem;
-    font-weight: 700;
-    line-height: 2.5rem;
+
+    .about-text a,
+    .produkter-text a,
+    .openinghours-text a {
+        color: #F15A25;
+        place-self: center;
+        font-size: 2.3rem;
+        font-weight: 700;
+        line-height: 2.5rem;
 
 
     }
@@ -430,13 +432,14 @@ span img {
         margin: 2vw;
     }
 
-     #produkter-textforside p {
+    #produkter-textforside p {
         font-size: 2.2rem;
         line-height: 3rem;
 
 
     }
-/*
+
+    /*
 
     .forside-container {
         grid-template-columns: 1fr;
@@ -464,7 +467,7 @@ span img {
         line-height: 3.5rem;
     }
 
-/*
+    /*
     .splash-content a {
         left: 29vw;
     }
@@ -521,18 +524,18 @@ span img {
 
     }
 
-.about-text,
-.produkter-text,
-.openinghours-text {
-    margin: 1vw 3vw 1vw 3vw;
+    .about-text,
+    .produkter-text,
+    .openinghours-text {
+        margin: 1vw 3vw 1vw 3vw;
 
 
 
     }
 
-    #produkter-textforside{
-    margin: 1vw 15vw 1vw 15vw;
-/*    text-align: center;*/
+    #produkter-textforside {
+        margin: 1vw 15vw 1vw 15vw;
+        /*    text-align: center;*/
         align-content: center;
 
 
@@ -617,5 +620,4 @@ span img {
 
 }
 
-@media only screen and (min-width: 1117px) and (max-width: 1800px) {
-}
+@media only screen and (min-width: 1117px) and (max-width: 1800px) {}
