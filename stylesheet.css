@@ -190,9 +190,18 @@ p {
     }
 }
 
+
+
 /*Ændringer efter 27/05*/
 
 
+.playknappen1 {
+    position: fixed;
+    max-width: 5vw;
+    right: 1vw;
+
+
+}
 
 
 .googlemaps {
@@ -699,3 +708,10 @@ span img {
     }
 
 }
+
+
+
+
+
+
+
