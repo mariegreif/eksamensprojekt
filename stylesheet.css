@@ -22,10 +22,9 @@ h1 {
 h2 {
     font-family: 'Viga', sans-serif;
     color: #F15A25;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2.5rem;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0.2rem 0.5rem 0.2rem;
 
 }
 
@@ -216,11 +215,22 @@ p {
 
 
 #produkter-textforside p {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    line-height: 2rem;
+    text-align-last: justify;
+/*    margin: 0vw 12vw;*/
 
 }
 
+.aabningstiderforside {
+    text-align-last: justify;
+    margin: 0vw 20vw;
+}
+.linkaabningstider {
+   margin: 0vw 20vw;
+
+}
 .forside-container img {
     width: 100%;
     /*    max-width: 800px;*/
@@ -245,8 +255,11 @@ p {
 .about-text {
     /*    max-width: 1000px;*/
     margin: 0 auto;
-    margin: 1vw 1vw 1vw 1vw;
+    margin: 5vw 1vw;
     line-height: 1.8rem;
+    align-self: center;
+
+
 
 }
 
@@ -283,8 +296,7 @@ p {
 .produkter-text a,
 .openinghours-text a {
     color: #F15A25;
-    place-self: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -432,12 +444,7 @@ span img {
         margin: 2vw;
     }
 
-    #produkter-textforside p {
-        font-size: 2.2rem;
-        line-height: 3rem;
 
-
-    }
 
     /*
 
@@ -479,6 +486,27 @@ span img {
 
 /************ MEDIA DESKTOP **************/
 @media (min-width: 1116px) {
+    #produkter-textforside p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align-last: justify;
+    margin: 0vw 12vw;
+
+}
+
+
+    .aabningstiderforside {
+    text-align-last: justify;
+    margin: 0vw 10vw;
+}
+
+.linkaabningstider {
+   margin: 0vw 10vw;
+
+}
+
+
     .forside-container {
         grid-template-columns: 1fr 1fr;
         margin-top: 3vw;
@@ -522,6 +550,13 @@ span img {
         line-height: 2.5vw;
 
 
+
+    }
+
+    #produkter-textforside{
+
+
+
     }
 
     .about-text,
@@ -533,13 +568,15 @@ span img {
 
     }
 
+/*
     #produkter-textforside {
         margin: 1vw 15vw 1vw 15vw;
-        /*    text-align: center;*/
+            text-align: center;
         align-content: center;
 
 
     }
+*/
 
 
 
@@ -620,4 +657,3 @@ span img {
 
 }
 
-@media only screen and (min-width: 1117px) and (max-width: 1800px) {}
