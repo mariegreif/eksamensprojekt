@@ -240,7 +240,7 @@ p {
     position: relative;
     grid-template-columns: 1fr;
     font-family: 'Roboto', sans-serif;
-    /*    margin-bottom: -5px;*/
+        margin-bottom: -5px;
 
 }
 
@@ -553,7 +553,7 @@ span img {
 
     .forside-container {
         grid-template-columns: 1fr 1fr;
-        margin-top: 3vw;
+
 
     }
 
