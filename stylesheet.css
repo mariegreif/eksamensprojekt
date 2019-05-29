@@ -170,6 +170,7 @@ p {
     animation: bounce 2s infinite;
     font-size: 40px
 }
+/*
 
 @keyframes bounce {
 
@@ -189,7 +190,7 @@ p {
         transform: translateY(-15px);
     }
 }
-
+*/
 
 
 /*Ændringer efter 27/05*/
@@ -197,8 +198,9 @@ p {
 
 .playknappen1 {
     position: fixed;
-    max-width: 5vw;
-    right: 1vw;
+    max-width: 15vw;
+    right: 1px;
+
 
 
 }
