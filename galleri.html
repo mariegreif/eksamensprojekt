@@ -169,7 +169,7 @@ animation-duration: 0.8s;
             right: 0;
         }
 
-        #prew {
+        #prev {
             left: 0;
         }
 
@@ -299,7 +299,7 @@ animation-duration: 0.8s;
             <img class="popupimage">
             <p class="popupbeskrivelse"></p>
             <div class="close">&times;</div>
-            <button id="prew" class="button"><i class="fa fa-angle-left"></i></button>
+            <button id="prev" class="button"><i class="fa fa-angle-left"></i></button>
             <button id="next" class="button"><i class="fa fa-angle-right"></i>
             </button>
         </div>
@@ -363,10 +363,10 @@ animation-duration: 0.8s;
         let temp = document.querySelector("template");
 
         function visBilleder() {
-            console.log(filter);
+            //            console.log(filter);
             document.querySelector(".masonry-gallery").innerHTML = "";
 
-            gallery.forEach(billede => {
+            gallery.forEach((billede, i) => {
                 if (filter == "alle" || filter == billede.kategori) {
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector("img").src = billede.billede.guid;
@@ -374,15 +374,15 @@ animation-duration: 0.8s;
 
                     dest.appendChild(klon);
                     dest.lastElementChild.addEventListener("click", function() {
-                        visSingle(billede)
+                        visSingle(billede, i)
                     });
                 }
             })
 
         }
 
-        function visSingle(billede) {
-            console.log("hej")
+        function visSingle(billede, i) {
+            //            console.log("hej")
             let luk = document.querySelector(".close");
             document.querySelector(".popupimage").src = billede.billede.guid;
             //document.querySelector(".popupbeskrivelse").innerHTML = billede.beskrivelse;
@@ -391,8 +391,16 @@ animation-duration: 0.8s;
             document.querySelector("#popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", close);
             luk.addEventListener("click", close);
-            document.querySelector("button").addEventListener("click", nextImage);
-            console.log("test")
+            //console.log(document.querySelector("button"));
+            document.querySelector("#next").addEventListener("click", () => {
+                nextImage("next", billede, i);
+            });
+            document.querySelector("#prev").addEventListener("click", () => {
+                nextImage("prev", billede, i);
+            });
+            //            document.querySelector("#next").addEventListener("click", nextImage);
+            //            document.querySelector("#prew").addEventListener("click", nextImage);
+            //            console.log("test")
         }
 
 
@@ -419,15 +427,22 @@ animation-duration: 0.8s;
         }
 
 
-        var i = temp.length;
+        //var y = gallery.length;
 
-        function nextImage() {
-            if (i > temp.length) {
-                i = i + 1;
-            } else {
-                i = 1;
+        function nextImage(dir, billede, i) {
+            //console.log(gallery, gallery.length, y)
+
+
+            if (dir == "prev") {
+                //                if (gallery.length < 0)[i == 14];
+                visSingle(gallery[i - 1], i - 1);
+
             }
-            temp.innerHTML = "dest[i - 1]";
+            if (dir == "next") {
+                if (gallery.length > 14) {}
+                visSingle(gallery[i + 1], i + 1);
+            }
+
         }
     </script>
     <script src="script.js"></script>
