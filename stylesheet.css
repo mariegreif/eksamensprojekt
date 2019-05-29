@@ -227,10 +227,7 @@ p {
     text-align-last: justify;
     margin: 0vw 20vw;
 }
-.linkaabningstider {
-   margin: 0vw 20vw;
 
-}
 .forside-container img {
     width: 100%;
     /*    max-width: 800px;*/
@@ -386,27 +383,31 @@ span img {
 
 
     h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin: 0.2rem 2vw 1rem 1.9vw;
-        line-height: 4rem;
+        line-height: 3.5rem;
 
     }
 
     p {
         font-family: 'Raleway', sans-serif;
-        font-size: 1.8rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
         margin:  0.2rem 2vw 1rem 2vw;
     }
+
+
+
+
 
     .about-text a,
     .produkter-text a,
     .openinghours-text a {
         color: #F15A25;
         place-self: center;
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: 700;
-        line-height: 2.5rem;
+        line-height: 2.3rem;
         margin: 0.2rem 2vw 1rem 4vw;
 
 
@@ -414,7 +415,7 @@ span img {
 
 
     #produkter-textforside p {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: bold;
     line-height: 2.5rem;
     text-align-last: justify;
@@ -426,10 +427,12 @@ span img {
     margin: 0vw 20vw;
 }
 
-.linkaabningstider {
-   margin: 0vw 30vw;
 
-}
+    .produkter-text a {
+        margin-left: 24vw;
+
+    }
+
 
     footer {
         grid-template-columns: auto auto auto;
@@ -516,17 +519,35 @@ span img {
     text-align-last: justify;
 
 }
-
+.about-text a,
+.produkter-text a,
+.openinghours-text a {
+    color: #F15A25;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 
     .aabningstiderforside {
     text-align-last: justify;
     margin: 0vw 10vw;
 }
 
-.linkaabningstider {
-   margin: 0vw 10vw;
 
-}
+    .produkter-text a {
+        color: #F15A25;
+        place-self: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 2.3rem;
+        margin: 0.2rem 2vw 1rem 7vw;
+
+
+    }
+
+    .produkter-text a {
+        margin-left: 10.4vw;
+
+    }
 
 
     .forside-container {
@@ -558,11 +579,14 @@ span img {
         font-family: 'Raleway', sans-serif;
         font-size: 1.5vw;
         line-height: 2vw;
+        margin: 0vw 0vw 0vw 0.2vw;
     }
 
     h2 {
         font-size: 3vw;
         line-height: 3vw;
+        margin:
+
 
 
     }
@@ -575,11 +599,7 @@ span img {
 
     }
 
-    #produkter-textforside{
 
-
-
-    }
 
     .about-text,
     .produkter-text,
