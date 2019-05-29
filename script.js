@@ -7,7 +7,7 @@ let arrow = document.querySelector(".arrow");
 
 arrow.addEventListener("click", smoothScroll);
 
-document.addEventListener("DOMContentLoaded", hentJson);
+
 
 function smoothScroll() {
     console.log("scroll");
