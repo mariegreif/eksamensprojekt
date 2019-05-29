@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Viga&display=swap" rel="stylesheet">
     <style>
+        html,
+        body {
+            /*scroll-behavior: smooth;*/
+        }
+
+
         .masonry-gallery {
             margin-right: auto;
             margin-left: auto;
@@ -181,7 +187,7 @@ animation-duration: 0.8s;
             text-align: center;
             background-color: white;
             color: black;
-            padding: 0.5rem 0.5rem 1.5rem;
+            padding: 0.5rem;
         }
 
         .popupbeskrivelse {
@@ -263,14 +269,18 @@ animation-duration: 0.8s;
     <div class="gallery-content">
         <h1>GALLERI</h1>
         <p>Anders raads produkter er unikke, elegante og en sand skønhed at have i sit hjem.</p>
+
         <div class="arrow scroll">
             <i class="fa fa-arrow-down"></i>
         </div>
+
+
     </div>
 </div>
 
 
 <body>
+    <section id="start-galleri"></section>
     <nav>
         <button class="filter valgt" data-hold="alle">ALLE</button>
         <button class="filter" data-hold="Skåle">SKÅLE</button>
@@ -343,7 +353,20 @@ animation-duration: 0.8s;
     <script>
         let filter = "alle";
         let gallery = [];
+        let arrow = document.querySelector(".arrow");
+
+        arrow.addEventListener("click", smoothScroll);
+
         document.addEventListener("DOMContentLoaded", hentJson);
+
+        function smoothScroll() {
+            console.log("scroll");
+            window.scrollTo({
+                top: 500,
+                left: 500,
+                behavior: 'smooth'
+            });
+        }
 
         //hent JSON fil i asynkron funktion
         async function hentJson() {
@@ -370,9 +393,9 @@ animation-duration: 0.8s;
                 if (filter == "alle" || filter == billede.kategori) {
                     let klon = temp.cloneNode(true).content;
                     klon.querySelector("img").src = billede.billede.guid;
-                    //klon.querySelector(".beskrivelse").innerHTML = billede.beskrivelse;
 
                     dest.appendChild(klon);
+
                     dest.lastElementChild.addEventListener("click", function() {
                         visSingle(billede, i)
                     });
@@ -391,16 +414,12 @@ animation-duration: 0.8s;
             document.querySelector("#popup").style.display = "block";
             document.querySelector(".close").addEventListener("click", close);
             luk.addEventListener("click", close);
-            //console.log(document.querySelector("button"));
             document.querySelector("#next").addEventListener("click", () => {
                 nextImage("next", billede, i);
             });
             document.querySelector("#prev").addEventListener("click", () => {
                 nextImage("prev", billede, i);
             });
-            //            document.querySelector("#next").addEventListener("click", nextImage);
-            //            document.querySelector("#prew").addEventListener("click", nextImage);
-            //            console.log("test")
         }
 
 
@@ -439,7 +458,7 @@ animation-duration: 0.8s;
 
             }
             if (dir == "next") {
-                if (gallery.length > 14) {}
+                //if (gallery.length > 14) {}
                 visSingle(gallery[i + 1], i + 1);
             }
 
