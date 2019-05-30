@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
-        <!--    favicon-->
+    <!--    favicon-->
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -46,7 +46,7 @@
         }
 
         .splash-kontakt img {
-          position: absolute;
+            position: absolute;
             top: 0;
             left: 0;
             object-fit: cover;
@@ -55,9 +55,9 @@
         }
 
         .splash-kontakt .kontakt-content {
-             position: absolute;
+            position: absolute;
             z-index: 1;
-            max-width: 250px;
+            /*            max-width: 250px;*/
             margin: 0 auto;
             text-align: center;
             color: white;
@@ -66,39 +66,54 @@
 
         .kontakt-content h1 {
             font-family: 'Viga', sans-serif;
-            font-size: 7vw;
+            font-size: 2rem;
         }
 
         .kontakt-content p {
             font-family: 'Raleway';
-            font-size: 2.5vw;
-            line-height: 3vw;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            max-width: 300px;
         }
 
 
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) and (max-width: 1160px) {
 
-            #splash-kontakt {
-                height: 75%;
+            .splash-kontakt {
+                height: 100%;
             }
 
-            #splash-kontakt .kontakt-content {
-                max-width: 500px;
+
+            .splash-kontakt .kontakt-content {
+                /*                max-width: 500px;*/
                 margin-top: 5vw;
             }
+
+                  .kontakt-content h1 {
+              font-family: 'Viga', sans-serif;
+            font-size: 4rem;
+        }
+
+
+            .kontakt-content p {
+              font-family: 'Raleway';
+            font-size: 2rem;
+            line-height: 2rem;
+            max-width: 600px;
+            }
+
         }
 
 
 
-        @media (min-width: 1025px) {
+        @media (min-width: 1160px) {
 
             .splash-kontakt {
                 height: 100%;
             }
 
             .splash-kontakt .kontakt-content {
-                max-width: 700px;
-                margin-top: 6vw;
+                /*                max-width: 700px;*/
             }
 
             nav {
@@ -115,8 +130,21 @@
 
             }
 
+            .kontakt-content h1 {
+             font-family: 'Viga', sans-serif;
+            font-size: 6rem;
+            }
+
+            .kontakt-content p {
+              font-family: 'Raleway';
+            font-size: 3rem;
+            line-height: 3.5rem;
+            max-width: 940px;
+            }
+
 
         }
+
     </style>
 
 
@@ -134,7 +162,7 @@
         </div>
 
         <div id="navbar">
-            <a href="index.html" id="logo"><img src="img/logo-version2.png"></a>
+            <a href="index.html" id="logo"><img src="img/logo-version2.png" alt="logo"></a>
 
             <div id="navbar-right">
                 <a href="index.html">FORSIDE</a>
@@ -149,7 +177,7 @@
 
 
     <div class="splash-kontakt">
-       <picture>
+        <picture>
             <source media="(min-width: 1024px)" srcset="img/desktop/splash-kontakt.jpg">
             <source media="(min-width: 768px)" srcset="img/tablet/splash-kontakt_tablet.jpg">
             <img src="img/mobile/splash-kontakt_mobil.jpg" alt="splashmobile">
@@ -190,7 +218,7 @@
 
 
     </main>
-     <footer>
+    <footer>
         <div class="footer-column">
             <h3>REVIEW OS</h3>
             <a href="https://search.google.com/local/writereview?placeid=ChIJW5WYLJxNUkYR4bawLoRZoFs" target="_blank"><img class="footerreview" src="img/starsgoogle.png" alt="Google reviews"></a>
@@ -216,8 +244,8 @@
         <div class="footer-column">
             <h3>FØLG OS</h3>
             <div class="footer-some">
-                <a href="#"><img src="img/Fb.png"></a>
-                <a href="#"><img src="img/Insta.png"> </a></div>
+                <a href="#"><img src="img/Fb.png" alt="FBicon"></a>
+                <a href="#"><img src="img/Insta.png" alt="InstaIcon"></a></div>
 
         </div>
 
@@ -289,6 +317,7 @@
                 }
             })
         };
+
     </script>
 
     <script src="script.js"></script>

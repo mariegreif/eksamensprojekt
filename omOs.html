@@ -38,7 +38,7 @@
         #splash-omos {
             position: relative;
             width: 100%;
-            height: 50vh;
+            height: 70vh;
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -57,50 +57,65 @@
         #splash-omos .omos-content {
             position: absolute;
             z-index: 1;
-            max-width: 250px;
+/*            max-width: 250px;*/
             margin: 0 auto;
             text-align: center;
             color: white;
+
 
         }
 
         .omos-content h1 {
             font-family: 'Viga', sans-serif;
-            font-size: 7vw;
+            font-size: 2rem;
         }
 
         .omos-content p {
             font-family: 'Raleway';
-            font-size: 2.5vw;
-            line-height: 3vw;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            max-width: 250px;
 
         }
 
 
 
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-            #splash-omos {
-                height: 75%;
-            }
-
-            #splash-omos .omos-content {
-                max-width: 500px;
-                margin-top: 5vw;
-            }
-        }
-
-
-
-        @media (min-width: 1025px) {
+        @media only screen and (min-width: 768px) and (max-width: 1160px) {
 
             #splash-omos {
                 height: 100%;
             }
 
             #splash-omos .omos-content {
-                max-width: 700px;
-                margin-top: 6vw;
+/*                max-width: 500px;*/
+                margin-top: 5vw;
+            }
+
+               .omos-content h1 {
+            font-family: 'Viga', sans-serif;
+            font-size: 4rem;
+        }
+
+        .omos-content p {
+            font-family: 'Raleway';
+            font-size: 2rem;
+            line-height: 2rem;
+            max-width: 500px;
+
+        }
+        }
+
+
+
+        @media (min-width: 1160px) {
+
+            #splash-omos {
+                height: 100%;
+            }
+
+            #splash-omos .omos-content {
+/*                max-width: 700px;*/
+
             }
 
             nav {
@@ -116,6 +131,19 @@
                 font-size: 2vw;
 
             }
+              .omos-content h1 {
+            font-family: 'Viga', sans-serif;
+            font-size: 6rem;
+        }
+
+
+        .omos-content p {
+            font-family: 'Raleway';
+            font-size: 3rem;
+            line-height: 3.5rem;
+            max-width: 640px;
+
+        }
 
 
         }
@@ -135,7 +163,7 @@
             <a href="kontakt.html">Kontakt</a>
         </div>
         <div id="navbar">
-            <a href="index.html" id="logo"><img src="img/logo-version2.png"></a>
+            <a href="index.html" id="logo"><img src="img/logo-version2.png" alt="logo" ></a>
 
             <div id="navbar-right">
                 <a href="index.html">FORSIDE</a>
@@ -211,8 +239,8 @@
         <div class="footer-column">
             <h3>FØLG OS</h3>
             <div class="footer-some">
-                <a href="#"><img src="img/Fb.png"></a>
-                <a href="#"><img src="img/Insta.png"> </a></div>
+                <a href="#"><img src="img/Fb.png" alt="FBicon" ></a>
+                <a href="#"><img src="img/Insta.png" alt="InstaIcon"></a></div>
 
         </div>
 

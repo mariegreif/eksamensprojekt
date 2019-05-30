@@ -41,7 +41,7 @@
         #splash-events {
             position: relative;
             width: 100%;
-            height: 50vh;
+            height: 70vh;
             overflow: auto;
             display: flex;
             justify-content: center;
@@ -59,9 +59,9 @@
         }
 
         #splash-events .events-content {
-            position: absolute;
+           position: absolute;
             z-index: 1;
-            max-width: 250px;
+/*            max-width: 250px;*/
             margin: 0 auto;
             text-align: center;
             color: white;
@@ -69,28 +69,42 @@
         }
 
         .events-content h1 {
+        font-family: 'Viga', sans-serif;
+            font-size: 2rem;
+        }
+
+        .events-content p {
+        font-family: 'Raleway';
+            font-size: 1rem;
+            line-height: 1.5rem;
+            max-width: 250px;
+        }
+
+
+
+        @media only screen and (min-width: 768px) and (max-width: 1160px) {
+
+            #splash-events {
+                height: 100%;
+            }
+
+            #splash-events .events-content {
+       /*                max-width: 500px;*/
+                margin-top: 5vw;
+            }
+          .events-content h1 {
             font-family: 'Viga', sans-serif;
-            font-size: 7vw;
+            font-size: 4rem;
         }
 
         .events-content p {
             font-family: 'Raleway';
-            font-size: 2.5vw;
-            line-height: 3vw;
+            font-size: 2rem;
+            line-height: 2rem;
+            max-width: 500px;
+
         }
 
-
-
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-            #splash-events {
-                height: 75%;
-            }
-
-            #splash-events .events-content {
-                max-width: 500px;
-                margin-top: 5vw;
-            }
         }
 
 
@@ -102,8 +116,10 @@
             }
 
             #splash-events .events-content {
+/*
                 max-width: 700px;
                 margin-top: 6vw;
+*/
             }
 
             nav {
@@ -119,6 +135,19 @@
                 font-size: 2vw;
 
             }
+           .events-content h1 {
+            font-family: 'Viga', sans-serif;
+            font-size: 6rem;
+        }
+
+        .events-content p {
+               font-family: 'Raleway';
+            font-size: 3rem;
+            line-height: 3.5rem;
+            max-width: 800px;
+
+
+        }
 
 
         }
@@ -137,7 +166,7 @@
         </div>
 
         <div id="navbar">
-            <a href="index.html" id="logo"><img src="img/logo-version2.png"></a>
+            <a href="index.html" id="logo"><img src="img/logo-version2.png" alt="logo"></a>
 
             <div id="navbar-right">
                 <a href="index.html">FORSIDE</a>
@@ -183,7 +212,7 @@
     </main>
 
 
-     <footer>
+  <footer>
         <div class="footer-column">
             <h3>REVIEW OS</h3>
             <a href="https://search.google.com/local/writereview?placeid=ChIJW5WYLJxNUkYR4bawLoRZoFs" target="_blank"><img class="footerreview" src="img/starsgoogle.png" alt="Google reviews"></a>
@@ -209,8 +238,8 @@
         <div class="footer-column">
             <h3>FØLG OS</h3>
             <div class="footer-some">
-                <a href="#"><img src="img/Fb.png"></a>
-                <a href="#"><img src="img/Insta.png"> </a></div>
+                <a href="#"><img src="img/Fb.png" alt="FBicon" ></a>
+                <a href="#"><img src="img/Insta.png" alt="InstaIcon"></a></div>
 
         </div>
 
