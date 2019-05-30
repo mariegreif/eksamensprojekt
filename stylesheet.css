@@ -197,10 +197,14 @@ p {
 
 
 .playknappen1 {
-    position: fixed;
-    max-width: 15vw;
-    right: 1px;
-
+  height: 10vw;
+  width: 10vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+    top: 5vh;
 
 
 }
@@ -227,7 +231,7 @@ p {
 
 #produkter-textforside p {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 100;
     line-height: 2rem;
     text-align-last: justify;
     /*    margin: 0vw 12vw;*/
@@ -525,11 +529,24 @@ span img {
 @media (min-width: 1160px) {
     #produkter-textforside p {
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: 100;
         line-height: 2rem;
         text-align-last: justify;
 
     }
+
+    .playknappen1 {
+  height: 7vw;
+  width: 7vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+    top: 5vh;
+
+
+}
 
     .about-text a,
     .produkter-text a,
