@@ -170,6 +170,7 @@ p {
     animation: bounce 2s infinite;
     font-size: 40px
 }
+/*
 
 @keyframes bounce {
 
@@ -189,10 +190,20 @@ p {
         transform: translateY(-15px);
     }
 }
+*/
+
 
 /*Ændringer efter 27/05*/
 
 
+.playknappen1 {
+    position: fixed;
+    max-width: 15vw;
+    right: 1px;
+
+
+
+}
 
 
 .googlemaps {
@@ -240,7 +251,7 @@ p {
     position: relative;
     grid-template-columns: 1fr;
     font-family: 'Roboto', sans-serif;
-    /*    margin-bottom: -5px;*/
+        margin-bottom: -5px;
 
 }
 
@@ -553,7 +564,7 @@ span img {
 
     .forside-container {
         grid-template-columns: 1fr 1fr;
-        margin-top: 3vw;
+
 
     }
 
@@ -699,3 +710,10 @@ span img {
     }
 
 }
+
+
+
+
+
+
+
