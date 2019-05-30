@@ -270,12 +270,13 @@ p {
 
 .forside-container {
 /*    min-height: 100%;*/
-/*    overflow: auto;*/
+    overflow: auto;
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
     font-family: 'Roboto', sans-serif;
         margin-bottom: -5px;
+
 
 }
 
