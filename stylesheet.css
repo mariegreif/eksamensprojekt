@@ -152,16 +152,7 @@ p {
 
 
 
-.arrow {
-    position: relative;
-    top: 40vw;
-    text-align: center;
-    color: white;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
 
-}
 
 
 .scroll {
@@ -219,7 +210,7 @@ p {
 .playknappen1 {
   height: 10vw;
   width: 10vw;
-  position: absolute;
+  position: relative;
   left: 50%;
   margin-left: -50px;
   top: 50%;
@@ -536,12 +527,19 @@ span img {
         line-height: 3.5rem;
     }
 
-    /*
-    .splash-content a {
-        left: 29vw;
+
+     .splash-content a {
+        top: 26vw;
+        left: 31vw;
     }
 
-*/
+    .playknappen1 {
+        height: 6vw;
+        width: 6vw;
+
+    }
+
+
 
 
 }
@@ -589,15 +587,12 @@ span img {
         font-size: 1.3rem;
         font-weight: 700;
         line-height: 2.3rem;
-        margin: 0.2rem 2vw 1rem 7vw;
+        margin: 0.2rem 2vw 1rem 10.4vw;
 
 
     }
 
-    .produkter-text a {
-        margin-left: 10.4vw;
 
-    }
 
 
     .forside-container {
@@ -724,9 +719,6 @@ span img {
         margin: 1.5vw 2vw;
     }
 
-    .arrow {
-        top: 10vw;
-    }
 
     .footer-some img {
 
@@ -752,12 +744,36 @@ span img {
 
 
 
-
-
-
-
 .galleritekst {
     font-size: 1.5rem;
     margin: 0vw 30vw 0vw 10vw;
 
 }
+
+
+@media only screen and (max-width: 767px) {
+
+  .produkter-text a {
+    margin-left: 20vw;
+
+    }
+
+
+    .splash-content a {
+        top: 5rem;
+        position: absolute;
+
+    }
+
+    .playknappen1 {
+        height: 10vw;
+        width: 10vw;
+        left: 5vw;
+
+    }
+
+
+}
+
+
+

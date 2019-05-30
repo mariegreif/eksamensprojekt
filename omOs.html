@@ -76,9 +76,7 @@
 
         }
 
-        .arrow {
-            display: none;
-        }
+
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -119,10 +117,7 @@
 
             }
 
-            .arrow {
-                display: block;
-                top: 3vw;
-            }
+
         }
     </style>
 
@@ -153,8 +148,13 @@
 
     </header>
 
+
     <div id="splash-omos">
-        <img src="img/ny_splashbillede-omos.jpg">
+         <picture>
+            <source media="(min-width: 1024px)" srcset="img/desktop/ny_splashbillede-omos.jpg">
+            <source media="(min-width: 768px)" srcset="img/tablet/ny_splashbillede-omos_tablet.jpg">
+            <img src="img/mobile/ny_splashbillede-omos_mobil.jpg" alt="splashmobile">
+        </picture>
         <div class="omos-content">
             <h1>Om Anders Raad</h1>
             <p>Læs mere om Anders Raad og hans værksted.</p>

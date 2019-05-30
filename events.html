@@ -78,9 +78,7 @@
             line-height: 3vw;
         }
 
-        .arrow {
-            display: none;
-        }
+
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -121,10 +119,7 @@
 
             }
 
-            .arrow {
-                display: block;
-                top: 3vw;
-            }
+
         }
     </style>
 </head>
@@ -154,13 +149,15 @@
 
     </header>
     <div id="splash-events">
-        <img src="img/arrangementer.jpg">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="img/desktop/arrangementer.jpg">
+            <source media="(min-width: 768px)" srcset="img/tablet/event_tablet.jpg">
+            <img src="img/mobile/event_mobil.jpg" alt="splashmobile">
+        </picture>
         <div class="events-content">
             <h1>ARRANGEMENTER</h1>
             <p>Teambuilding og Polterabend</p>
-            <div class="arrow scroll">
-                <i class="fa fa-arrow-down"></i>
-            </div>
+
         </div>
     </div>
 

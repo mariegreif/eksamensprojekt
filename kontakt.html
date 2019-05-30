@@ -75,9 +75,6 @@
             line-height: 3vw;
         }
 
-        .arrow {
-            display: none;
-        }
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -118,10 +115,7 @@
 
             }
 
-            .arrow {
-                display: block;
-                top: 3vw;
-            }
+
         }
     </style>
 
@@ -155,19 +149,18 @@
 
 
     <div class="splash-kontakt">
-        <img src="img/splash-kontakt.jpg">
+       <picture>
+            <source media="(min-width: 1024px)" srcset="img/desktop/splash-kontakt.jpg">
+            <source media="(min-width: 768px)" srcset="img/tablet/splash-kontakt_tablet.jpg">
+            <img src="img/mobile/splash-kontakt_mobil.jpg" alt="splashmobile">
+        </picture>
         <div class="kontakt-content">
             <h1>KONTAKT</h1>
             <p>Her kan du finde du telefonnummer, email og finde vej til butiksværkstedet. </p>
-            <div class="arrow scroll">
-                <i class="fa fa-arrow-down"></i>
-            </div>
+
         </div>
     </div>
     <main>
-
-
-
         <section class="forside-container">
             <div class="openinghours-text">
                 <h2 class="kontakttitel1"></h2>
