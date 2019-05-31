@@ -85,7 +85,7 @@ p {
 /*Forside ********************************************************/
 
 .splash-video {
-/*    width: 100%;*/
+    /*    width: 100%;*/
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -128,13 +128,13 @@ p {
 }
 
 .splash-content {
-/*    background-color: rgba(0, 0, 0, 0.59);*/
-/*    width: 100%;*/
+    /*    background-color: rgba(0, 0, 0, 0.59);*/
+    /*    width: 100%;*/
 
 }
 
 
-        .pulse {
+.pulse {
     animation-name: pulse_kf;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -231,6 +231,7 @@ p {
     animation: bounce 2s infinite;
     font-size: 40px
 }
+
 /*
 
 @keyframes bounce {
@@ -257,34 +258,34 @@ p {
 /*Ændringer efter 27/05*/
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+    width: 20px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px #000000;
-  border-radius: 10px;
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #F15A25;
-  border-radius: 8px;
+    background: #F15A25;
+    border-radius: 8px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(241, 90, 37, 0.85);
+    background: rgba(241, 90, 37, 0.85);
 }
 
 .playknappen1 {
-  height: 10vw;
-  width: 10vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50px;
-  top: 50%;
-  margin-top: -50px;
+    height: 10vw;
+    width: 10vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
     top: 5vh;
 
 
@@ -326,17 +327,17 @@ p {
 
 .forside-container img {
     width: 100%;
-/*        max-width: 800px;*/
+    /*        max-width: 800px;*/
 }
 
 .forside-container {
-/*    min-height: 100%;*/
+    /*    min-height: 100%;*/
     overflow: auto;
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
     font-family: 'Roboto', sans-serif;
-/*        margin-bottom: -5px;*/
+    /*        margin-bottom: -5px;*/
 
 
 }
@@ -589,16 +590,16 @@ footer {
 */
 
     .splash-content h1 {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     .splash-content p {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 3.5rem;
     }
 
 
-     .splash-content a {
+    .splash-content a {
         top: 26vw;
         left: 31vw;
     }
@@ -625,17 +626,17 @@ footer {
     }
 
     .playknappen1 {
-  height: 7vw;
-  width: 7vw;
-  position: absolute;
-  left: 50%;
-  margin-left: -50px;
-  top: 50%;
-  margin-top: -50px;
-    top: 5vh;
+        height: 7vw;
+        width: 7vw;
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 50%;
+        margin-top: -50px;
+        top: 5vh;
 
 
-}
+    }
 
     .about-text a,
     .produkter-text a,
@@ -672,7 +673,7 @@ footer {
     }
 
     .splash-content h1 {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     .splash-content p {
@@ -823,8 +824,8 @@ footer {
 
 @media only screen and (max-width: 767px) {
 
-  .produkter-text a {
-    margin-left: 20vw;
+    .produkter-text a {
+        margin-left: 20vw;
 
     }
 
