@@ -124,8 +124,14 @@ p {
     margin: 0 auto;
     text-align: center;
     color: white;
+
 }
 
+.splash-content {
+/*    background-color: rgba(0, 0, 0, 0.59);*/
+/*    width: 100%;*/
+
+}
 
 
         .pulse {
@@ -838,6 +844,8 @@ footer {
 
 
 }
+
+
 
 
 
