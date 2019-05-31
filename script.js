@@ -3,20 +3,7 @@ window.onscroll = function () {
     scrollFunction()
 };
 
-let arrow = document.querySelector(".arrow");
 
-arrow.addEventListener("click", smoothScroll);
-
-
-
-function smoothScroll() {
-    console.log("scroll");
-    window.scrollTo({
-        top: 500,
-        left: 500,
-        behavior: 'smooth'
-    });
-}
 document.querySelector("#mobile-button").addEventListener("click", toggleMenu);
 
 function scrollFunction() {
