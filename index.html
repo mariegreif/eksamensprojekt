@@ -158,7 +158,6 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", hentJson2);
-
         let forside;
 
         async function hentJson2() {
@@ -173,11 +172,16 @@
         };
 
         function visIndhold2() {
+//          funktion til at hente data bliver kaldt
             console.log(forside)
             forside.forEach(sektion => {
 
                 console.log(sektion.id);
                 if (sektion.id == "45") {
+//              Hvis id'en er 45 | Altså siden der bliver hentet fra wordpress har custom post id 45, så skal disse queryselectors
+//               Hente den data, på de forskellige sektioner i custom post.
+
+
                     document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
                     document.querySelector(".forsidetekst").innerHTML = sektion.tekst;
                     document.querySelector(".forsidebillede1").src = sektion.image.guid;
