@@ -91,7 +91,7 @@
                 <br>
                 <a href="galleri.html">Gå til galleriet</a>
             </div>
-            <div class="openinghours-image"><img class="forsidebillede1" alt="billede1"></div>
+            <div class="openinghours-image"><img src="#" class="forsidebillede1" alt="billede1"></div>
 
 
             <div id="produkter-textforside" class="produkter-text">
@@ -106,14 +106,14 @@
             </div>
 
 
-            <div class="products-image"><img class="forsidebillede2" alt="billede2"> </div>
+            <div class="products-image"><img src="#" class="forsidebillede2" alt="billede2"> </div>
             <div class="about-text">
                 <h2 class="forsidetitel2"></h2>
                 <p class="forsidetekst2"></p>
                 <br>
                 <a href="omOs.html">Læs mere om os</a>
             </div>
-            <div class="about-img"><img class="forsidebillede3" alt="billede3"></div>
+            <div class="about-img"><img src="#" class="forsidebillede3" alt="billede3"></div>
         </section>
     </main>
 
@@ -181,12 +181,15 @@
                     document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
                     document.querySelector(".forsidetekst").innerHTML = sektion.tekst;
                     document.querySelector(".forsidebillede1").src = sektion.image.guid;
+                    document.querySelector(".forsidebillede1").alt = sektion.overskift;
                     document.querySelector(".forsidebillede2").src = sektion.image_copy.guid;
+                    document.querySelector(".forsidebillede2").alt = sektion.overskift_copy;
                     document.querySelector(".forsidetitel1").innerHTML = sektion.overskift_copy;
                     document.querySelector(".forsidetekst1").innerHTML = sektion.tekst_copy;
-                    document.querySelector(".forsidetitel2").innerHTML = sektion.overskift_copy_copy
+                    document.querySelector(".forsidetitel2").innerHTML = sektion.overskift_copy_copy;
                     document.querySelector(".forsidetekst2").innerHTML = sektion.tekst_copy_copy;
                     document.querySelector(".forsidebillede3").src = sektion.image_copy_copy.guid;
+                    document.querySelector(".forsidebillede3").alt = sektion.overskift_copy_copy;
 
 
 

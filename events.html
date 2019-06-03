@@ -215,7 +215,7 @@
                 <h2 class="eventstitel1"></h2>
                 <p class="eventstekst1"></p>
             </div>
-            <div class="openinghours-image"><img class="eventsbillede1"></div>
+            <div class="openinghours-image"><img src="#" alt="" class="eventsbillede1"></div>
 
 
             <div class="produkter-text">
@@ -223,7 +223,7 @@
                 <p class="eventstekst"></p>
 
             </div>
-            <div class="products-image"><img class="eventsbillede2"> </div>
+            <div class="products-image"><img src="#" alt="" class="eventsbillede2"> </div>
         </section>
 
     </main>
@@ -291,7 +291,9 @@
                     document.querySelector(".eventstitel").innerHTML = sektion.overskift;
                     document.querySelector(".eventstekst").innerHTML = sektion.tekst;
                     document.querySelector(".eventsbillede1").src = sektion.image.guid;
+                    document.querySelector(".eventsbillede1").alt = sektion.overskift;
                     document.querySelector(".eventsbillede2").src = sektion.image_copy.guid;
+                    document.querySelector(".eventsbillede2").alt = sektion.overskift_copy;
                     document.querySelector(".eventstitel1").innerHTML = sektion.overskift_copy;
                     document.querySelector(".eventstekst1").innerHTML = sektion.tekst_copy;
 

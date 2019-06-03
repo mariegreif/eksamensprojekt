@@ -207,7 +207,7 @@
                 <h2 class="omostitel"></h2>
                 <p class="omostekst"></p>
             </div>
-            <div class="openinghours-image"><img class="omosbillede1"></div>
+            <div class="openinghours-image"><img src="#" alt="" class="omosbillede1"></div>
 
 
             <div class="produkter-text">
@@ -215,12 +215,12 @@
                 <p class="omostekst1"></p>
 
             </div>
-            <div class="products-image"><img class="omosbillede2"> </div>
+            <div class="products-image"><img src="#" alt="" class="omosbillede2"> </div>
             <div class="about-text">
                 <h2 class="omostitel2"></h2>
                 <p class="omostekst2"></p>
             </div>
-            <div class="about-img"><img class="omosbillede3"></div>
+            <div class="about-img"><img src="#" alt="" class="omosbillede3"></div>
         </section>
     </main>
     <footer>
@@ -284,12 +284,15 @@
                     document.querySelector(".omostitel").innerHTML = sektion.overskift;
                     document.querySelector(".omostekst").innerHTML = sektion.tekst;
                     document.querySelector(".omosbillede1").src = sektion.image.guid;
+                    document.querySelector(".omosbillede1").alt = sektion.overskift;
                     document.querySelector(".omosbillede2").src = sektion.image_copy.guid;
+                    document.querySelector(".omosbillede2").alt = sektion.overskift;
                     document.querySelector(".omostitel1").innerHTML = sektion.overskift_copy;
                     document.querySelector(".omostekst1").innerHTML = sektion.tekst_copy;
                     document.querySelector(".omostitel2").innerHTML = sektion.overskift_copy_copy
                     document.querySelector(".omostekst2").innerHTML = sektion.tekst_copy_copy;
                     document.querySelector(".omosbillede3").src = sektion.image_copy_copy.guid;
+                    document.querySelector(".omosbillede3").alt = sektion.overskift;
 
 
 
