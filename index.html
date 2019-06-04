@@ -77,7 +77,7 @@
             <div class="splash-content">
                 <h1>ANDERS RAAD GLAS</h1>
                 <p>Glaspuster og glasdesigner i Charlottenlund, København</p>
-                <a class="pulse" target="_blank" href="https://www.youtube.com/watch?v=sjoSyESuETY"><img class="playknappen1" src="img/whiteplaybutton.png" alt="playbutton"></a>
+                <a class="pulse" target="_blank" href="https://www.youtube.com/watch?v=mNcBQ3AzKbE&t=2s"><img class="playknappen1" src="img/whiteplaybutton.png" alt="playbutton"></a>
 
 
 
@@ -172,14 +172,14 @@
         };
 
         function visIndhold2() {
-//          funktion til at hente data bliver kaldt
+            //          funktion til at hente data bliver kaldt
             console.log(forside)
             forside.forEach(sektion => {
 
                 console.log(sektion.id);
                 if (sektion.id == "45") {
-//              Hvis id'en er 45 | Altså siden der bliver hentet fra wordpress har custom post id 45,
-//              så skal disse queryselectors hente den data, på de forskellige sektioner i custom post.
+                    //              Hvis id'en er 45 | Altså siden der bliver hentet fra wordpress har custom post id 45,
+                    //              så skal disse queryselectors hente den data, på de forskellige sektioner i custom post.
 
 
                     document.querySelector(".forsidetitel").innerHTML = sektion.overskift;
@@ -200,6 +200,7 @@
                 }
             })
         };
+
     </script>
 
     <script src="script.js"></script>
