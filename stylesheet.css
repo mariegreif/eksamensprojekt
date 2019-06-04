@@ -410,6 +410,9 @@ footer {
     /*    align-items: center;*/
     bottom: 0;
     clear: both;
+    margin-top: -1.2vw;
+
+
 
 }
 
@@ -535,6 +538,7 @@ footer {
     footer {
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
+        margin-top: -0.6vw;
     }
 
     .footer-some {
@@ -567,27 +571,6 @@ footer {
         align-self: center;
         margin: 2vw;
     }
-
-
-
-    /*
-
-    .forside-container {
-        grid-template-columns: 1fr;
-    }
-
-    .openinghours-text {
-        grid-column-start: 1;
-    }
-
-    .openinghours-image {
-        grid-column-start: 2;
-    }
-
-    .produkter-text {
-        grid-column-start: 2;
-    }
-*/
 
     .splash-content h1 {
         font-size: 5vw;
@@ -726,16 +709,6 @@ footer {
 
     }
 
-    /*
-    #produkter-textforside {
-        margin: 1vw 15vw 1vw 15vw;
-            text-align: center;
-        align-content: center;
-
-
-    }
-*/
-
 
 
     #logo img {
@@ -757,6 +730,7 @@ footer {
 
 
     footer {
+        margin-top: -0.4vw;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
     }
