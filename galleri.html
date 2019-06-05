@@ -366,7 +366,6 @@ animation-duration: 0.8s;
 
     </section>
 
-    <!--    <p class="galleritekst" >I galleriet kan du få et indblik i hvad anders raad har lavet, og samtidig finde inspiration til hvilke glas kunstværker du vil være interesseret i. Mange af disse ting kan købes i butikken, og hvis du har specielle ønsker om produkt design kan Anders Raad kontaktes <a href="kontakt.html">her.</a></p>-->
 
     <nav>
         <button class="filter valgt" data-hold="alle">Alle</button>
@@ -455,22 +454,30 @@ animation-duration: 0.8s;
             //Kald funktionen som viser data i DOM
             visBilleder();
         }
+
+
         let dest = document.querySelector(".masonry-gallery");
         let temp = document.querySelector("template");
+        // Vi har brugt template tagget, som skal klones og fyldes med data fra wordpress
 
         function visBilleder() {
-            //
+            //Funktion der skal klone template-taggets indhold og vises i et array
+
             document.querySelector(".masonry-gallery").innerHTML = "";
 
             gallery.forEach((billede, i) => {
                 if (filter == "alle" || filter == billede.kategori) {
                     let klon = temp.cloneNode(true).content;
+                    // kloning af template-taggets indhold
                     klon.querySelector("img").src = billede.billede.guid;
+                    //Indholdet fra wordpress bliver hentet som en array
 
                     dest.appendChild(klon);
+                    // Tilføjet klonen til main-tagget
 
                     dest.lastElementChild.addEventListener("click", function() {
                         visSingle(billede, i)
+                        //Ved klik på en af billederne, gå til funktion VisSingle
                     });
                 }
             })
@@ -478,20 +485,31 @@ animation-duration: 0.8s;
         }
 
         function visSingle(billede, i) {
+            //Funktionen indholder en luk-knap samt to piler som skal vise før og næste billede i galleriet
+
             let luk = document.querySelector(".close");
             document.querySelector(".popupimage").src = billede.billede.guid;
+            //billedet som man trykker på vises som popup
 
             document.querySelector("main").style.filter = "blur(8px)";
+            // Når der vises billeder i popup-view skal baggrunden på hjemmesiden blive blurret
 
             document.querySelector("#popup").style.display = "block";
+            // Fjerner classen "hidden" fra elementet, så at billedet kan vises
+
             document.querySelector(".close").addEventListener("click", close);
             luk.addEventListener("click", close);
+            // Ved klik på krydset, gå til funktionen som lukker popup-viewet
+
+
             document.querySelector("#next").addEventListener("click", () => {
                 nextImage("next", billede, i);
             });
             document.querySelector("#prev").addEventListener("click", () => {
                 nextImage("prev", billede, i);
             });
+
+            // Ved klik på pilerne, skal næste billede fra galleriet vises, stadig i popup
         }
 
 
@@ -521,8 +539,6 @@ animation-duration: 0.8s;
 
 
         function nextImage(dir, billede, i) {
-
-
 
             if (dir == "prev") {
 
