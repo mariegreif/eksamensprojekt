@@ -459,7 +459,7 @@ animation-duration: 0.8s;
         let temp = document.querySelector("template");
 
         function visBilleder() {
-            //            console.log(filter);
+            //
             document.querySelector(".masonry-gallery").innerHTML = "";
 
             gallery.forEach((billede, i) => {
@@ -480,7 +480,7 @@ animation-duration: 0.8s;
         function visSingle(billede, i) {
             let luk = document.querySelector(".close");
             document.querySelector(".popupimage").src = billede.billede.guid;
-            //document.querySelector(".popupbeskrivelse").innerHTML = billede.beskrivelse;
+
             document.querySelector("main").style.filter = "blur(8px)";
 
             document.querySelector("#popup").style.display = "block";
@@ -518,19 +518,18 @@ animation-duration: 0.8s;
         }
 
 
-        //var y = gallery.length;
+
 
         function nextImage(dir, billede, i) {
-            //console.log(gallery, gallery.length, y)
+
 
 
             if (dir == "prev") {
-                //                if (gallery.length < 0)[i == 14];
+
                 visSingle(gallery[i - 1], i - 1);
 
             }
             if (dir == "next") {
-                //if (gallery.length > 14) {}
                 visSingle(gallery[i + 1], i + 1);
             }
 
