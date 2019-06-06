@@ -310,7 +310,7 @@
             })
         };
 
-        //     Henter åbeningstider fra forsiden, så når man ændrer på forsidernes åbeningstider, så ændre den det også her på kontakt.
+        //     Henter åbeningstider fra forsiden, så når man ændrer på forsidernes åbningstider, så ændre den det også her på kontakt.
 
         async function hentJson2() {
             const url = "http://shani.dk/kea/WordpressAndersRaadGlas/wp-json/wp/v2/forside";
@@ -324,11 +324,13 @@
         };
 
         function visIndhold3() {
+//            funktion startes til at hente dataen fra åbningstider.
             console.log(forside)
             forside.forEach(sektion => {
 
                 console.log(sektion.id);
                 if (sektion.id == "45") {
+//                    kalder på custompost, at hvis custom posts ID er 45, så skal den hente den her dataen
                     document.querySelector(".kontakttitel").innerHTML = sektion.overskift;
                     document.querySelector(".kontakttekst").innerHTML = sektion.tekst;
 
@@ -337,7 +339,7 @@
         };
     </script>
 
-    <script src="script.js"></script>
+
 </body>
 
 </html>
